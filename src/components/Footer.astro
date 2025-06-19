@@ -1,0 +1,95 @@
+---
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+---
+
+<section>
+    <div class="linksContainer">
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="/">Quien soy</a>
+            </li>
+            <li>
+                <a href="/">Consultorios</a>
+            </li>
+            <li>
+                <a href="/">Pre Quirurgico</a>
+            </li>
+            <li>
+                <a href="/">Patologias Ambulatorias</a>
+            </li>
+        </ul>
+    </div>
+    <div class="derechos">
+        <div class="socialLinks">
+            <a href=""><FaFacebookF /></a>
+            <a href=""><FaInstagram /></a>
+            <a href=""><FaLinkedinIn /></a>
+            <a href=""><FaWhatsapp/></a>
+        </div>
+        <div>
+            Todos los derechos reservados.
+        </div>
+        <div>
+            Desarrollado por TAPE Producciones
+        </div>
+    </div>
+
+</section>
+
+<style>
+    section{
+        background-color: black;
+        height: fit-content;
+        padding: 0px 125px;
+    }
+    .linksContainer{
+        padding-top: 50px;
+        
+    }
+    .linksContainer ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+    .linksContainer ul li{
+        
+        
+    }
+    .linksContainer ul li a{
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+    }
+    .derechos{
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0px;
+        color: white;
+        
+
+    }
+    .derechos .socialLinks{
+        display: flex;
+        gap: 4px;
+    }
+    .derechos .socialLinks a{
+        color: rgb(0, 0, 0);
+        background-color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1.5rem;
+    }
+</style>
+

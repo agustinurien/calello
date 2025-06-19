@@ -1,0 +1,183 @@
+---
+import icon from '../assets/images/icon.png';
+import icon2 from '../assets/images/icon2.png';
+import icon3 from '../assets/images/icon3.png';
+import ivoox from '../assets/images/ivoox.png';
+
+import { FaSpotify, FaYoutube } from "react-icons/fa";
+
+---
+
+
+<section>
+    <div class="contentContainer">
+        <div class="content">
+            <div class="dato">
+                <div class="iconContainer">
+                    <img src={icon.src} alt="">
+                </div>
+                <div class="textDato">
+                    <h3>Consultorios</h3>
+                    <p>Sedes, horarios y cómo pedir turno en
+CABA y GBA.</p>
+                </div>
+            </div>
+            <div class="datoButton">
+                <a href="/">VER MÁS</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="dato">
+                <div class="iconContainer">
+                    <img src={icon2.src} alt="">
+                </div>
+                <div class="textDato">
+                    <h3>Pre Quirurgico</h3>
+                    <p>Pasos y recomendaciones
+antes de una cirugía.</p>
+                </div>
+            </div>
+            <div class="datoButton">
+                <a href="/">VER MÁS</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="dato">
+                <div class="textDato">
+                    <h3>Podcast</h3>
+                    <p>Programas de radio que explican patologias frecuentes y no tan frecuentes, para
+escuchar on demand.</p>
+                </div>
+            </div>
+            <div class="linksButton">
+                <a href="/">
+                    <FaSpotify fontSize={36} color='rgb(163, 163, 163)'/>
+                </a>
+                <a href="/" style={{backgroundColor: 'rgb(163, 163, 163)'}}>
+                    <FaYoutube fontSize={20}/>
+                </a>
+                <a href="/">
+                    <img src={ivoox.src} alt="" class="ivooxIcon">
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="dato">
+                <div class="iconContainer">
+                    <img src={icon3.src} alt="">
+                </div>
+                <div class="textDato">
+                    <h3>Patologias <br>
+Ambulatorias</h3>
+                    <p>Procedimientos simples, sin
+internación.</p>
+                </div>
+            </div>
+            <div class="datoButton">
+                <a href="/">VER MÁS</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    section {
+        padding-left: 300px;
+        padding-bottom: 250px;
+        height: fit-content;
+        background-color:  #1f3147;
+        padding-top: 40px;
+    }
+    .contentContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        width: 80%;
+        flex-wrap: wrap;
+        
+    }
+    .content{
+        background-color: #fef5e4;
+        height: fit-content;
+        width: 380px;
+        border-radius: 15px;
+        padding-top: 20px;
+        
+    }
+    .dato {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 90px;
+        padding-left: 20px;
+        
+    }
+    .iconContainer {
+        width: 80px;
+        height: 80px;
+        background-color: #1f3147;
+        border-radius: 100%;
+        margin-right: 10px;
+    }
+    .iconContainer img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    .textDato {
+        width: 70%;
+        
+    }
+    .textDato h3 {
+        margin: 0;
+        font-size: 1.9rem;
+        color: #1f3147;
+    }
+    .textDato p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #1f3147;
+        width: 90%;
+        padding: 10px 0px;
+    }
+    .datoButton {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+    .datoButton a{
+        background-color: #fccfa8;
+		color: #1f3147;
+		padding: 7px 14px;
+		text-decoration: none;
+		border-radius: 20px;
+		font-size: 0.7rem;
+    }
+    .linksButton {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        gap: 5px;
+    }
+    .linksButton a {
+        color: #fef5e4;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+    .linksButton a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+</style>
