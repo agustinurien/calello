@@ -1,0 +1,143 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout>
+
+    <section>
+        <div>
+            
+        </div>
+        <div class="consultorioContainer">
+            <div class="consultorioImage">
+                <img src="" alt="">
+            </div>
+            <div class="consultorioText">
+                <div class="detalles">
+                    <div class="especialidad">
+                        <h3>Lirios del Talar
+                            (consultas
+                            privadas, OSDE
+                            y SMG)</h3>
+                    </div>
+                    <div class="detallesText">
+                        <p>Dirección: <br>
+                            Gral. José Gervasio Artigas 3188, 1617
+                            General Pacheco, Buenos Aires.
+                            (A 7 km del centro de General Pacheco)</p>
+                        <p>Atención: <br>
+Niños y adolescentes con distintas
+patologías quirúrgicas, con un enfoque
+centrado en el cuidado integral del
+paciente y su familia</p>
+                        <p>Desde la primera consulta, mi objetivo
+es acompañar, resolver y brindar
+tranquilidad</p>
+                    </div>
+                </div>
+                <div class="linkConsultorio">
+                    <a href="/">MÁS INFO</a>
+                </div>
+            </div>
+        </div>
+        <div class="consultorioContainer">
+            <div class="consultorioImage">
+                <img src="" alt="">
+            </div>
+            <div class="consultorioText">
+                <div class="detalles">
+                    <div class="especialidad">
+                        <h3>Lirios del Talar
+                            (consultas
+                            privadas, OSDE
+                            y SMG)</h3>
+                    </div>
+                    <div class="detallesText">
+                        <p>Dirección: <br>
+                            Gral. José Gervasio Artigas 3188, 1617
+                            General Pacheco, Buenos Aires.
+                            (A 7 km del centro de General Pacheco)</p>
+                        <p>Atención: <br>
+Niños y adolescentes con distintas
+patologías quirúrgicas, con un enfoque
+centrado en el cuidado integral del
+paciente y su familia</p>
+                        <p>Desde la primera consulta, mi objetivo
+es acompañar, resolver y brindar
+tranquilidad</p>
+                    </div>
+                </div>
+                <div class="linkConsultorio">
+                    <a href="/">MÁS INFO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    section{
+        height: fit-content;
+        
+        padding: 0px 7%;
+        padding-top: 120px;
+    }
+    .consultorioContainer{
+        height: fit-content;
+        padding-bottom: 100px;
+        border-bottom: 2px solid gray;
+    }
+    .consultorioContainer .consultorioImage{
+        height: 200px;
+        width: 50%;
+        
+    }
+    .consultorioContainer .consultorioText{
+        height: fit-content;
+        
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .consultorioContainer .consultorioText .detalles{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 80%;
+        
+    }
+    .consultorioContainer .consultorioText .detalles .especialidad{
+        
+        width: 20%;
+        height: 100%;
+        
+    }
+    .especialidad h3{
+        margin: 0px;
+
+    }
+    .detalles .detallesText{
+        display: flex;
+        gap: 15px;
+        height: 100%;
+        width: 70%;
+
+    }
+    .detalles .detallesText p{
+        margin: 0px;
+
+    }
+    .linkConsultorio{
+        
+        width: 20%;
+        height: 100%;
+        display: flex;
+        
+        justify-content: center;
+    }
+    .linkConsultorio a{
+        padding: 7px 20px;
+        background-color: #777;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+</style>
