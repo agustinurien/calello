@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import icon from "../assets/images/icon.png";
+import Cirugias from "../components/Cirugias";
+---
+
+<Layout>
+  <div class="titulo">
+    <div class="iconContainer">
+      <img src={icon.src} alt="" />
+    </div>
+    <div>
+      <h1>¿Que deberia hacer antes <br />de una cirugía?</h1>
+      <h3>Las respuestas que necesita</h3>
+    </div>
+  </div>
+  <section>
+    <div class="containerCirugia">
+      <Cirugias client:load />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .titulo {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px;
+    align-items: center;
+    background-color: #4f7792;
+    margin-top: 90px;
+    padding: 0px 8%;
+    box-sizing: border-box;
+  }
+  .titulo .iconContainer {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .titulo .iconContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .titulo h1 {
+    margin: 0px;
+    font-size: 3rem;
+    color: #fefefe;
+  }
+  .titulo h3 {
+    margin: 0px;
+
+    color: #fefefe;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 250px;
+    height: fit-content;
+    padding-top: 40px;
+  }
+  .containerCirugia {
+    background-color: rgb(255, 117, 117);
+    width: 700px;
+    height: 500px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+</style>

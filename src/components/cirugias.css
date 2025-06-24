@@ -1,0 +1,14 @@
+.cirugiasContainer {
+  width: 300px;
+  height: fit-content;
+  background-color: #f61d1d;
+}
+.cirugiasContainer h1 {
+  background-color: gray;
+  margin: 0px;
+  height: 100px;
+}
+.texto {
+  height: 100px;
+  background-color: blue;
+}

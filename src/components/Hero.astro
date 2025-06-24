@@ -4,196 +4,199 @@ import logo from "../assets/images/logo.png";
 ---
 
 <main>
-	<section class="hero">
-		<div class="titleContainer">
-			<h1 class="heroTitle">
-				La atención <br>
-			personalizada <br>
-			que tu hijo <br>
-			necesita
-			</h1>
-			<a href="/">CONTACTAR</a>
-		</div>
-		<div class="heroImage">
-			<img src={calello.src} alt="">
-		</div>
-		<aside class="doctor">
-			<div class="presentacion">
-				<h2>Dr. <br>
-					Santiago <br>
-					Calello 
-				</h2>
-				<div class="logoContainer">
-					<img src={logo.src} alt="Logo" class="logo">
-				</div>
-				<p>El cuidado de tus hijos es el eje de todo lo <br>
-					que hago, tanto en consultorio como en <br>
-					quirófano. Acompañar a cada familia con <br>
-					compromiso, empatía y cercanía es esencial <br> 
-					en mi manera de ejercer la medicina. <br>
-					Atiendo en Capital y Gran Buenos Aires. <br>
-					Ante cualquier inquietud, no dudes en <br>
-					escribirme.
-				</p>
-			</div>
+  <section class="hero">
+    <div class="titleContainer">
+      <h1 class="heroTitle">
+        La atención <br />
+        personalizada <br />
+        que tu hijo <br />
+        necesita
+      </h1>
+      <a href="/">CONTACTAR</a>
+    </div>
+    <div class="heroImage">
+      <img src={calello.src} alt="" />
+    </div>
 
-			<div class="turnos">
-				<p>Coordiná tu consulta de <br>
-				forma rápida y simple.<br>
-				Atiendo en CABA y Gran<br>
-				Buenos Aires.<br>
-				Hacé clic y reservá tu<br>
-				turno.</p>
+    <aside class="doctor">
+      <div class="presentacion">
+        <h2>
+          Dr. <br />
+          Santiago <br />
+          Calello
+        </h2>
+        <div class="logoContainer">
+          <img src={logo.src} alt="Logo" class="logo" />
+        </div>
+        <p>
+          El cuidado de tus hijos es el eje de todo lo <br />
+          que hago, tanto en consultorio como en <br />
+          quirófano. Acompañar a cada familia con <br />
+          compromiso, empatía y cercanía es esencial <br />
+          en mi manera de ejercer la medicina. <br />
+          Atiendo en Capital y Gran Buenos Aires. <br />
+          Ante cualquier inquietud, no dudes en <br />
+          escribirme.
+        </p>
+      </div>
 
-				<a href="/">TURNOS</a>
-			</div>
+      <div class="turnos">
+        <p>
+          Coordiná tu consulta de <br />
+          forma rápida y simple.<br />
+          Atiendo en CABA y Gran<br />
+          Buenos Aires.<br />
+          Hacé clic y reservá tu<br />
+          turno.
+        </p>
 
-			<div class="sobreMi">
-				<h3>Acerca de mi</h3>
-				<p>Soy el Dr. Santiago Calello, Cirujano <br> Pediátrico con formación en gastroenterología <br> y cirugía mínimamente invasiva. <br>
-					Desde chico supe que quería cuidar a<br>
-					quienes más lo necesitan, y encontré<br>
-					en la infancia mi propósito. Trabajo<br>
-					priorizando el cuidado integral del niño<br>
-					y la contención familiar, combinando<br>
-					excelencia técnica con compromiso<br>
-					humano. Atiendo en Capital y Gran<br>
-					Buenos Aires junto a equipos que <br> comparten esta misma visión.</p>
-					<a href="/">LEER MÁS</a>
-			</div>
-		</aside>
-	</section>
+        <a href="/">TURNOS</a>
+      </div>
+
+      <div class="sobreMi">
+        <h3>Acerca de mi</h3>
+        <p>
+          Soy el Dr. Santiago Calello, Cirujano <br /> Pediátrico con formación en
+          gastroenterología <br /> y cirugía mínimamente invasiva. <br />
+          Desde chico supe que quería cuidar a<br />
+          quienes más lo necesitan, y encontré<br />
+          en la infancia mi propósito. Trabajo<br />
+          priorizando el cuidado integral del niño<br />
+          y la contención familiar, combinando<br />
+          excelencia técnica con compromiso<br />
+          humano. Atiendo en Capital y Gran<br />
+          Buenos Aires junto a equipos que <br /> comparten esta misma visión.
+        </p>
+        <a href="/">LEER MÁS</a>
+      </div>
+    </aside>
+  </section>
 </main>
 
 <style>
-	main{
-		padding-top: 90px;
-	}
-	.hero{
-		position: relative;
-		display: flex;
-		padding-top: 85px;
-	}
-	.doctor{
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 30%;
-		height: fit-content;
-		border-bottom-left-radius: 30px;
-		display: flex;
-		flex-direction: column;
-		
-	}
-	.doctor .presentacion{
-		padding-left: 40px;
-		background-color: #fef5e4;
-	}
-	.doctor .presentacion h2{
-		margin: 0px;
-		margin-top: 85px;
-		font-size: 4.5rem;
-		line-height: 0.9;
-		color: #1f3147;
-	}
-	.doctor .presentacion .logoContainer{
-		display: flex;
-		align-items: center;
-		padding: 25px 0px;
-		
-		width: 180px;
-	}
-	.doctor .presentacion .logoContainer .logo{
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-	.doctor .presentacion p{
-		margin: 0px;
-		color: #1f3147;
-		padding-bottom: 16px;
-	}
+  main {
+    padding-top: 90px;
+  }
+  .hero {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 85px;
 
+    padding-right: 30%;
+  }
+  .doctor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: fit-content;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .doctor .presentacion {
+    padding-left: 40px;
+    background-color: #fef5e4;
+  }
+  .doctor .presentacion h2 {
+    margin: 0px;
+    margin-top: 85px;
+    font-size: 4.5rem;
+    line-height: 0.9;
+    color: #1f3147;
+  }
+  .doctor .presentacion .logoContainer {
+    display: flex;
+    align-items: center;
+    padding: 25px 0px;
 
-	.doctor .turnos{
-		background-color: #fccfa8;
-		padding: 35px 40px;
-		border-bottom-left-radius: 25px;
-	}
-	.doctor .turnos p{
-		margin: 0px;
-		padding-bottom: 20px;
-		font-size: 0.9rem;
-		color: #1f3147;
-	}
-	.doctor .turnos a{
-		background-color: #1f3147;
-		color: white;
-		padding: 7px 14px;
-		text-decoration: none;
-		border-radius: 20px;
-		font-size: 0.7rem;
-	}
-	.doctor .sobreMi{
-		padding: 0px 40px;
-		background-color: #1f3147;
-	}
-	.doctor .sobreMi h3{
-		padding: 25px 0px;
-		margin: 0px;
-		font-size: 1.8rem;
-		color: white;
-	}
-	.doctor .sobreMi p{
-		margin: 0px;
-		padding-bottom: 35px;
-		font-size: 1.2rem;
-		color: #fef5e4;
-	}
-	.doctor .sobreMi a{
-		background-color: #fccfa8;
-		color: #1f3147;
-		padding: 7px 14px;
-		text-decoration: none;
-		border-radius: 20px;
-		font-size: 0.7rem;
-	}
-	
+    width: 180px;
+  }
+  .doctor .presentacion .logoContainer .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .doctor .presentacion p {
+    margin: 0px;
+    color: #1f3147;
+    padding-bottom: 16px;
+  }
 
+  .doctor .turnos {
+    background-color: #fccfa8;
+    padding: 35px 40px;
+    border-bottom-left-radius: 25px;
+  }
+  .doctor .turnos p {
+    margin: 0px;
+    padding-bottom: 20px;
+    font-size: 0.9rem;
+    color: #1f3147;
+  }
+  .doctor .turnos a {
+    background-color: #1f3147;
+    color: white;
+    padding: 7px 14px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.7rem;
+  }
+  .doctor .sobreMi {
+    padding: 0px 40px;
+    background-color: #1f3147;
+  }
+  .doctor .sobreMi h3 {
+    padding: 25px 0px;
+    margin: 0px;
+    font-size: 1.8rem;
+    color: white;
+  }
+  .doctor .sobreMi p {
+    margin: 0px;
+    padding-bottom: 35px;
+    font-size: 1.2rem;
+    color: #fef5e4;
+  }
+  .doctor .sobreMi a {
+    background-color: #fccfa8;
+    color: #1f3147;
+    padding: 7px 14px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.7rem;
+  }
 
-	.titleContainer{
-		
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: flex-start;
-		padding-left: 7%;
-	}
-	.heroTitle{
-		font-size: 3rem;
-		color: #1f3147;
-		margin-bottom: 20px;
-	}
-	.titleContainer a{
-		background-color: #fccfa8;
-		color: #1f3147;
-		padding: 7px 14px;
-		text-decoration: none;
-		border-radius: 20px;
-		font-size: 0.7rem;
-	}
-	.heroImage{
-		
-		display: flex;
-		align-items: flex-end;
-		justify-content: flex-start;
-		height: 550px;
-		width: 550px;
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .heroTitle {
+    font-size: 3rem;
+    color: #1f3147;
+    margin-bottom: 20px;
+  }
+  .titleContainer a {
+    background-color: #fccfa8;
+    color: #1f3147;
+    padding: 7px 14px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.7rem;
+  }
+  .heroImage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 550px;
+    width: 550px;
+  }
+  .heroImage img {
+    height: 100%;
 
-	}
-	.heroImage img{
-		height: 100%;
-		
-		object-fit: contain;
-	}
+    object-fit: contain;
+  }
 </style>
