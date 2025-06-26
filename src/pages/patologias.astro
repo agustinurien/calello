@@ -1,22 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import icon from "../assets/images/icon.png";
-import Cirugias from "../components/Cirugias";
+import icon3 from "../assets/images/icon3.png";
+import Patologia from "../components/Patologia.jsx";
 ---
 
 <Layout>
   <div class="titulo">
     <div class="iconContainer">
-      <img src={icon.src} alt="" />
+      <img src={icon3.src} alt="" />
     </div>
     <div>
-      <h1>¿Que deberia hacer antes <br />de una cirugía?</h1>
-      <h3>Las respuestas que necesita</h3>
+      <h1>Patología <br />ambulatoria</h1>
     </div>
   </div>
   <section>
     <div class="containerCirugia">
-      <Cirugias client:load />
+      <Patologia client:load />
     </div>
   </section>
   <div class="dudas">
@@ -86,7 +85,7 @@ import Cirugias from "../components/Cirugias";
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     padding-bottom: 50px;
   }
   .links a {

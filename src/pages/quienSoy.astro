@@ -1,0 +1,322 @@
+---
+import Layout from "../layouts/Layout.astro";
+const fotos = [
+  {
+    src: "/imagenes/foto1.jpg",
+    texto:
+      "Con la Dra. Silvana Prodan, cirujana, compañera y amiga. Un lujo compartir este camino.",
+  },
+  {
+    src: "/imagenes/foto2.jpg",
+    texto:
+      "Con el Dr. Luigi Dall'Oglio, cirujano pediátrico italiano y referente en trabajo en equipo y dedicación a la medicina. Un verdadero modelo profesional con quien tuve el honor de rotar en el Ospedale Bambino Gesu de Italia.",
+  },
+  {
+    src: "/imagenes/foto3.jpg",
+    texto:
+      "Mi equipo de residentes. En las malas y en las buenas, siempre con ellos. Gracias por tanto, compañeros de camino",
+  },
+  {
+    src: "/imagenes/foto4.jpg",
+    texto:
+      "Con algunas de las tantas instrumentadoras que hacen que cada día en quirófano sea más fácil. Gracias por tanto trabajo y buena onda.",
+  },
+  {
+    src: "/imagenes/foto5.jpg",
+    texto:
+      "La forma de trabajar cambió, Silvana Prodan pero las personas no. Seguimos Santiago Calello siendo el mismo equipo, con las mismas ganas de siempre.",
+  },
+  {
+    src: "/imagenes/foto6.jpg",
+    texto:
+      "Con el Dr. Tomás Vainstein, anestesiólogo y amigo. Así, todo es más fácil",
+  },
+];
+---
+
+<Layout>
+  <section>
+    <div class="titulo">
+      <h2>TRAYECTORIA <br />PROFESIONAL</h2>
+      <h1>Quién soy</h1>
+    </div>
+    <div class="textoQuienSoy">
+      <p>
+        Me formé como médico en la Universidad Austral, donde me gradué con
+        honores en 2009. Desde el principio entendí que cuidar a un paciente no
+        es so- lamente resolver una dolencia, sino acompañarlo como un todo:
+        cuerpo, mente y espíritu, con respeto por sus tiempos, su historia y su
+        familia. <br /><br />
+        Me especialicé en Cirugía Pediátrica en el Hospital Italiano de Buenos Aires,
+        donde realicé mi residen- cia entre 2010 y 2015, y me desempeñé como Jefe
+        de Residentes en 2016. Allí aprendí que la excelencia técnica va de la mano
+        de la empatía, la escucha activa y el trabajo interdisciplinario. Sigo vinculado
+        al hospital como médico asociado.
+      </p>
+      <p>
+        Después de mi residencia, profundicé mi formación en cirugía digestiva
+        pediátrica y en gastroenterolo- gía funcional, con una Maestría en
+        Gastroenterolo- gía Pediátrica y entrenamientos en cirugía mínima- mente
+        invasiva y endoscopia digestiva avanzada en el Hospital Bambino Gesù de
+        Roma. Me capacité también en técnicas como la manometría anorrec- tal,
+        el biofeedback y el tratamiento con toxina botu- línica para trastornos
+        funcionales. Además, participé activamente en congresos nacionales e
+        internacio- nales, presentando investigaciones, desarrollando
+        simuladores quirúrgicos, e innovando en técnicas laparoscópicas para
+        resolver patologías complejas en niños y adolescentes.
+      </p>
+    </div>
+    <div class="gridFotosContainer">
+      <div class="gridFotos fila-1">
+        {
+          fotos.slice(0, 3).map((foto, index) => (
+            <div class={`fotoItem foto-${index}`}>
+              <p>{foto.texto}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Segunda fila -->
+      <div class="gridFotos fila-2">
+        {
+          fotos.slice(3).map((foto, index) => (
+            <div class={`fotoItem foto-${index + 3}`}>
+              <p>{foto.texto}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="hospitalMaterno">
+      <div class="hospitalContent">
+        <h3>
+          Director del Hospital Materno Infantil “Dr. Carlos Giananto- nio” de
+          San Isidro
+        </h3>
+        <div class="hospitalLogoContainer"></div>
+      </div>
+      <div class="textoHospital">
+        <p>
+          Desde 2018 tengo el honor de ser Director Ejecutivo del Hospital
+          Materno Infantil “Dr. Carlos Giananto- nio” de San Isidro, un centro
+          de referencia en salud materno-infantil en la zona norte del Gran
+          Buenos Aires. <br /><br /> En este rol coordino los equipos médicos, formo
+          parte activa en la docencia como instructor de resi- dentes, y trabajo
+          cada día para garantizar una aten- ción de calidad, humana y cercana para
+          madres, niños y sus familias. <br /><br />Mi compromiso es sostener y
+          mejorar un sistema de salud pública que acompañe, escuche y esté pre-
+          sente en cada etapa del cuidado pediátrico.
+        </p>
+      </div>
+    </div>
+    <div class="hospitalMaterno2Container">
+      <div class="hospitalMaterno2">
+        <div class="textoHospital">
+          <p>
+            Actualmente soy socio del Grupo de Cirugía Pediá- trica (GCP), un
+            equipo de excelencia técnica y humana, que trabaja no solo para
+            brindar soluciones quirúrgicas de alta y baja complejidad, sino
+            también para cuidar a los propios cirujanos. Nuestra misión no
+            termina en el quirófano: queremos construir en- tornos de trabajo
+            sostenibles, donde los profesiona- les puedan desplegar su vocación
+            con respaldo, tec- nología, formación continua y bienestar, porque
+            creemos que equipos fuertes hacen mejores ciru- gías y cuidan mejor
+            a cada paciente y a su familia.
+          </p>
+        </div>
+        <div class="textoHospital">
+          <p>
+            Desde abril de 2024 tengo el honor de ser Director Ejecutivo del
+            Hospital Materno Infantil Dr. Carlos Gianantonio, un hospital con
+            historia, calidad humana y vocación pública. Mi misión es liderar su
+            proceso de transformación para que alcance su máximo potencial como
+            centro de referencia en salud pediátrica del norte de la provincia
+            de Buenos Aires. Trabajamos para mejorar la atención médica,
+            fortalecer los servicios críticos, optimizar la gestión, y proyectar
+            una institución que combine ciencia, ca- lidez, innovación y
+            equidad.
+          </p>
+        </div>
+      </div>
+      <div class="hospitalMaterno3">
+        <div class="textoHospital">
+          <p>
+            Soy papá de cuatro hijos, cirujano por vocación, y <strong>
+              estoy convencido de <br />que la medicina que transforma <br />es
+              la que se hace en
+            </strong>
+            equipo, <strong>con</strong> profesionalismo <strong>y con</strong> corazón.
+          </p>
+          <a href="/">contactar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f3147;
+    margin-top: 90px;
+  }
+  .titulo {
+    width: 50%;
+    background-color: red;
+  }
+  .titulo h2 {
+    font-size: 0.8rem;
+  }
+  .titulo h1 {
+    margin: 20px 0px;
+    font-size: 3rem;
+  }
+
+  .textoQuienSoy {
+    display: flex;
+    width: 50%;
+    background-color: violet;
+    gap: 20px;
+  }
+  .textoQuienSoy p {
+    margin: 0px;
+    width: 45%;
+    font-size: 1.1rem;
+  }
+  .gridFotosContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 70px 0px;
+  }
+  .gridFotos {
+    display: grid;
+    gap: 20px;
+  }
+
+  .fila-1 {
+    margin: 0px;
+    grid-template-columns: 6fr 4fr 5fr;
+  }
+  .fotoItem.foto-0 p {
+    width: 200px;
+  }
+  .fotoItem.foto-1 p {
+    width: 200px;
+  }
+  .fotoItem.foto-2 p {
+    width: 300px;
+  }
+  .fotoItem.foto-3 p {
+    width: 200px;
+  }
+  .fotoItem.foto-4 p {
+    width: 255px;
+  }
+  .fotoItem.foto-5 p {
+    width: 200px;
+  }
+
+  .fila-2 {
+    margin: 0px;
+    grid-template-columns: 1fr 2fr 1fr; /* podés cambiar esta también */
+  }
+
+  .fotoItem {
+    background-color: #f7f7f7;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    height: 350px;
+  }
+  .fotoItem p {
+    margin: 0px;
+    opacity: 0;
+    transition: transform 0.5s ease;
+    padding: 20px;
+  }
+
+  .fotoItem:hover {
+    transform: translateY(-5px);
+  }
+  .fotoItem:hover p {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  .hospitalMaterno {
+    padding-bottom: 80px;
+    display: flex;
+    width: 50%;
+    gap: 40px;
+  }
+  .hospitalMaterno2Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefaef;
+  }
+  .hospitalMaterno2 {
+    padding-top: 80px;
+    display: flex;
+    width: 50%;
+    gap: 40px;
+  }
+  .hospitalMaterno3 {
+    padding-top: 20px;
+    padding-bottom: 150px;
+    width: 50%;
+  }
+  .hospitalMaterno3 .textoHospital {
+    padding-top: 20px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .hospitalMaterno3 .textoHospital a {
+    background-color: #1f3147;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+  .hospitalMaterno3 .textoHospital p {
+    font-size: 3.4rem;
+  }
+  .textoHospital {
+    display: flex;
+    width: 50%;
+  }
+  .textoHospital p {
+    width: 95%;
+    margin: 0px;
+    font-size: 1.2rem;
+  }
+  .hospitalContent {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+  }
+  .hospitalContent h3 {
+    color: white;
+    font-size: 2rem;
+    margin: 0px;
+  }
+  .hospitalLogoContainer {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+  }
+</style>
