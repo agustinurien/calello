@@ -4,6 +4,7 @@ import { uploadPatologiaPost } from "../../utils/funciones";
 
 const SubirPatologia = () => {
   const [nombre, setNombre] = useState("");
+  const [resumen, setResumen] = useState("");
   const [explicacion, setExplicacion] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -13,6 +14,7 @@ const SubirPatologia = () => {
     try {
       await uploadPatologiaPost({
         nombre: nombre,
+        resumen: resumen,
         explicacion: explicacion,
       });
 
@@ -34,6 +36,13 @@ const SubirPatologia = () => {
         placeholder="Nombre"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Resumen"
+        value={resumen}
+        onChange={(e) => setResumen(e.target.value)}
         required
       />
       <textarea

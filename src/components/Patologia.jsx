@@ -18,18 +18,24 @@ const Patologia = () => {
         const data = await fetchPatologiasPosts();
         console.log("Posts fetched:", data);
 
-        // Dividir las patologías a la mitad
-        const mitad = Math.ceil(data.length / 2);
-        const primeraMitad = data.slice(0, mitad);
-        const segundaMitad = data.slice(mitad);
+        // Alternar elementos en columnas y mantener índice original
+        const col1 = [];
+        const col2 = [];
 
-        // Guardar en columnas
-        setColumnaUno(primeraMitad);
-        setColumnaDos(segundaMitad);
+        data.forEach((item, i) => {
+          const newItem = { ...item, globalIndex: i + 1 }; // usamos i+1 para que el conteo empiece en 1
+          if (i % 2 === 0) {
+            col1.push(newItem);
+          } else {
+            col2.push(newItem);
+          }
+        });
 
-        // Inicializar estado de apertura de cada item
-        setOpenItemsCol1(Array(primeraMitad.length).fill(false));
-        setOpenItemsCol2(Array(segundaMitad.length).fill(false));
+        setColumnaUno(col1);
+        setColumnaDos(col2);
+
+        setOpenItemsCol1(Array(col1.length).fill(false));
+        setOpenItemsCol2(Array(col2.length).fill(false));
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -51,58 +57,68 @@ const Patologia = () => {
   };
   return (
     <>
-      <div className="firstCol">
-        {columnaUno.map((item, index) => {
-          return (
-            <div className="cirugiasContainer" key={index}>
-              <div className="cirugiasHeader">
-                <h2>{index + 1}</h2>
-                <h1>
-                  Cirugía <br />
-                  Programada
-                </h1>
-              </div>
-              <div className="openText">
-                <p>Pasos previos y preparativos necesarios.</p>
-                <button onClick={() => toggleItemCol1(index)}>
-                  {openItemsCol1[index] ? (
-                    <IoIosArrowDropupCircle />
-                  ) : (
-                    <IoIosArrowDropdownCircle />
+      {columnaUno.length === 0 && columnaDos.length === 0 ? (
+        <div className="loadingContainer">
+          <h1>Cargando...</h1>
+        </div>
+      ) : (
+        <>
+          <div className="firstCol">
+            {columnaUno.map((item, index) => {
+              return (
+                <div className="cirugiasContainer" key={index}>
+                  <div className="cirugiasHeader">
+                    <h2>{item.globalIndex}</h2>
+                    <h1>{item.nombre}</h1>
+                  </div>
+                  <div className="openText">
+                    <p>{item.resumen}</p>
+                    <button onClick={() => toggleItemCol1(index)}>
+                      {openItemsCol1[index] ? (
+                        <IoIosArrowDropupCircle />
+                      ) : (
+                        <IoIosArrowDropdownCircle />
+                      )}
+                    </button>
+                  </div>
+                  {openItemsCol1[index] && (
+                    <div className="texto">
+                      <p>{item.explicacion}</p>
+                    </div>
                   )}
-                </button>
-              </div>
-              {openItemsCol1[index] && <div className="texto"></div>}
-            </div>
-          );
-        })}
-      </div>
-      <div className="secondCol">
-        {columnaDos.map((item, index) => {
-          return (
-            <div className="cirugiasContainer" key={index}>
-              <div className="cirugiasHeader">
-                <h2>{index}</h2>
-                <h1>
-                  Cirugía <br />
-                  Programada
-                </h1>
-              </div>
-              <div className="openText">
-                <p>Pasos previos y preparativos necesarios.</p>
-                <button onClick={() => toggleItemCol2(index)}>
-                  {openItemsCol2[index] ? (
-                    <IoIosArrowDropupCircle />
-                  ) : (
-                    <IoIosArrowDropdownCircle />
+                </div>
+              );
+            })}
+          </div>
+          <div className="secondCol">
+            {columnaDos.map((item, index) => {
+              return (
+                <div className="cirugiasContainer" key={index}>
+                  <div className="cirugiasHeader">
+                    <h2>{item.globalIndex}</h2>
+                    <h1>{item.nombre}</h1>
+                  </div>
+                  <div className="openText">
+                    <p>{item.resumen}</p>
+                    <button onClick={() => toggleItemCol2(index)}>
+                      {openItemsCol2[index] ? (
+                        <IoIosArrowDropupCircle />
+                      ) : (
+                        <IoIosArrowDropdownCircle />
+                      )}
+                    </button>
+                  </div>
+                  {openItemsCol2[index] && (
+                    <div className="texto">
+                      <p>{item.explicacion}</p>
+                    </div>
                   )}
-                </button>
-              </div>
-              {openItemsCol2[index] && <div className="texto"></div>}
-            </div>
-          );
-        })}
-      </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
     </>
   );
 };

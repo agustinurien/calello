@@ -9,7 +9,7 @@ async function fetchPatologiasPosts() {
   return postsData;
 }
 
-async function uploadPatologiaPost({ nombre, explicacion }) {
+async function uploadPatologiaPost({ nombre, resumen, explicacion }) {
   console.log("Uploading patologia post:", { nombre, explicacion });
   if (!nombre || !explicacion) {
     console.error("Nombre o explicación faltante.");
@@ -18,6 +18,7 @@ async function uploadPatologiaPost({ nombre, explicacion }) {
   try {
     const docRef = await addDoc(collection(db, "patologias"), {
       nombre,
+      resumen,
       explicacion,
     });
     console.log("Patologia post created with ID:", docRef.id);
