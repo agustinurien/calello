@@ -1,27 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./patologia.css";
 import {
   IoIosArrowDropdownCircle,
   IoIosArrowDropupCircle,
 } from "react-icons/io";
+import { fetchPatologiasPosts } from "../utils/funciones";
 
 const Patologia = () => {
-  const columnaUno = [
-    { id: 1, title: "Cirugía Programada" },
-    { id: 2, title: "Cirugía Programada" },
-  ];
+  const [columnaUno, setColumnaUno] = useState([]);
+  const [columnaDos, setColumnaDos] = useState([]);
+  const [openItemsCol1, setOpenItemsCol1] = useState([]);
+  const [openItemsCol2, setOpenItemsCol2] = useState([]);
 
-  const columnaDos = [
-    { id: 3, title: "Cirugía Programada" },
-    { id: 4, title: "Cirugía Programada" },
-  ];
+  useEffect(() => {
+    const loadPosts = async () => {
+      try {
+        const data = await fetchPatologiasPosts();
+        console.log("Posts fetched:", data);
 
-  const [openItemsCol1, setOpenItemsCol1] = useState(
-    Array(columnaUno.length).fill(false)
-  );
-  const [openItemsCol2, setOpenItemsCol2] = useState(
-    Array(columnaDos.length).fill(false)
-  );
+        // Dividir las patologías a la mitad
+        const mitad = Math.ceil(data.length / 2);
+        const primeraMitad = data.slice(0, mitad);
+        const segundaMitad = data.slice(mitad);
+
+        // Guardar en columnas
+        setColumnaUno(primeraMitad);
+        setColumnaDos(segundaMitad);
+
+        // Inicializar estado de apertura de cada item
+        setOpenItemsCol1(Array(primeraMitad.length).fill(false));
+        setOpenItemsCol2(Array(segundaMitad.length).fill(false));
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    };
+
+    loadPosts();
+  }, []);
 
   const toggleItemCol1 = (index) => {
     setOpenItemsCol1((prev) =>
@@ -41,7 +56,7 @@ const Patologia = () => {
           return (
             <div className="cirugiasContainer" key={index}>
               <div className="cirugiasHeader">
-                <h2>{item.id}</h2>
+                <h2>{index + 1}</h2>
                 <h1>
                   Cirugía <br />
                   Programada
@@ -67,7 +82,7 @@ const Patologia = () => {
           return (
             <div className="cirugiasContainer" key={index}>
               <div className="cirugiasHeader">
-                <h2>{item.id}</h2>
+                <h2>{index}</h2>
                 <h1>
                   Cirugía <br />
                   Programada
