@@ -5,28 +5,34 @@ import logo from "../assets/images/logo.png";
 
 <main>
   <section class="hero">
-    <div class="titleContainer">
-      <h1 class="heroTitle">
-        La atención <br />
-        personalizada <br />
-        que tu hijo <br />
-        necesita
-      </h1>
-      <a href="/">CONTACTAR</a>
-    </div>
-    <div class="heroImage">
-      <img src={calello.src} alt="" />
+    <div class="heroContainer">
+      <div class="titleContainer">
+        <div class="titleContainer2">
+          <h1 class="heroTitle">
+            La atención <br />
+            personalizada <br />
+            que tu hijo <br />
+            necesita
+          </h1>
+          <a href="/">CONTACTAR</a>
+        </div>
+      </div>
+      <div class="heroImage">
+        <img src={calello.src} alt="" />
+      </div>
     </div>
 
     <aside class="doctor">
       <div class="presentacion">
-        <h2>
-          Dr. <br />
-          Santiago <br />
-          Calello
-        </h2>
-        <div class="logoContainer">
-          <img src={logo.src} alt="Logo" class="logo" />
+        <div class="dr">
+          <h2>
+            Dr. <br />
+            Santiago <br />
+            Calello
+          </h2>
+          <div class="logoContainer">
+            <img src={logo.src} alt="Logo" class="logo" />
+          </div>
         </div>
         <p>
           El cuidado de tus hijos es el eje de todo lo <br />
@@ -80,16 +86,19 @@ import logo from "../assets/images/logo.png";
   .hero {
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-top: 85px;
-
-    padding-right: 30%;
+  }
+  .heroContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 61%;
   }
   .doctor {
     position: absolute;
     top: 0;
     right: 0;
-    width: 30%;
+    width: 35%;
     height: fit-content;
     border-bottom-left-radius: 30px;
     display: flex;
@@ -102,9 +111,10 @@ import logo from "../assets/images/logo.png";
   .doctor .presentacion h2 {
     margin: 0px;
     margin-top: 85px;
-    font-size: 4.5rem;
+    font-size: 4.3rem;
     line-height: 0.9;
     color: #1f3147;
+    font-family: "Recia-Variable", sans-serif;
   }
   .doctor .presentacion .logoContainer {
     display: flex;
@@ -122,6 +132,9 @@ import logo from "../assets/images/logo.png";
     margin: 0px;
     color: #1f3147;
     padding-bottom: 16px;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2;
   }
 
   .doctor .turnos {
@@ -132,8 +145,11 @@ import logo from "../assets/images/logo.png";
   .doctor .turnos p {
     margin: 0px;
     padding-bottom: 20px;
-    font-size: 0.9rem;
+
     color: #1f3147;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
   }
   .doctor .turnos a {
     background-color: #1f3147;
@@ -142,6 +158,7 @@ import logo from "../assets/images/logo.png";
     text-decoration: none;
     border-radius: 20px;
     font-size: 0.7rem;
+    font-family: "Supreme-Variable", sans-serif;
   }
   .doctor .sobreMi {
     padding: 0px 40px;
@@ -150,14 +167,17 @@ import logo from "../assets/images/logo.png";
   .doctor .sobreMi h3 {
     padding: 25px 0px;
     margin: 0px;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: white;
+    font-family: "Supreme-Variable", sans-serif;
   }
   .doctor .sobreMi p {
     margin: 0px;
     padding-bottom: 35px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #fef5e4;
+    font-family: "Supreme-Variable", sans-serif;
+    line-height: 1.1;
   }
   .doctor .sobreMi a {
     background-color: #fccfa8;
@@ -166,20 +186,36 @@ import logo from "../assets/images/logo.png";
     text-decoration: none;
     border-radius: 20px;
     font-size: 0.7rem;
+    font-family: "Supreme-Variable", sans-serif;
   }
 
   .titleContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+    height: 500px;
+    width: 320px;
+  }
+  .titleContainer2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20px;
   }
   .heroTitle {
     font-size: 3rem;
     color: #1f3147;
+    margin-top: 0px;
     margin-bottom: 20px;
+    line-height: 1.1;
+    font-family: "Supreme-Variable", sans-serif;
   }
-  .titleContainer a {
+  .titleContainer2 a {
     background-color: #fccfa8;
     color: #1f3147;
     padding: 7px 14px;
@@ -195,8 +231,167 @@ import logo from "../assets/images/logo.png";
     width: 550px;
   }
   .heroImage img {
-    height: 100%;
-
+    height: auto;
+    width: 100%;
     object-fit: contain;
   }
+
+  @media (max-width: 1050px) {
+    .hero {
+      padding-top: 30px;
+    }
+    .heroContainer {
+      width: 58%;
+    }
+    .heroImage {
+      width: 450px;
+    }
+    .titleContainer2 {
+      padding-left: 70px;
+    }
+
+    .doctor {
+      width: 37%;
+    }
+    .doctor .presentacion h2 {
+      font-size: 3rem;
+      margin-top: 30px;
+    }
+    .doctor .presentacion {
+      padding-bottom: 20px;
+      padding-left: 33px;
+    }
+    .doctor .presentacion p {
+      font-size: 0.7rem;
+    }
+    .doctor .presentacion .logoContainer {
+      padding: 20px 0px;
+    }
+    .doctor .turnos {
+      padding: 33px 30px;
+    }
+    .doctor .turnos p {
+      font-size: 0.7rem;
+    }
+    .doctor .sobreMi {
+      padding: 0px 33px;
+      padding-right: 20px;
+    }
+    .doctor .sobreMi p {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0px;
+    }
+    .heroContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .heroImage {
+      width: 400px;
+    }
+    .doctor {
+      position: relative;
+      width: 100%;
+      height: fit-content;
+      border-bottom-left-radius: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .doctor .presentacion {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      padding: 0px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      
+  }
+  .dr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 80%;
+
+  }
+    .doctor .presentacion h2 {
+      
+      font-size: 2rem;
+      margin-top: 0px;
+    }
+    .doctor .presentacion h2 br{
+      display: none;
+    }
+    .doctor .presentacion .logoContainer {
+    display: flex;
+    
+    align-items: center;
+    padding: 0px 0px;
+    width: 150px;
+    
+    
+  }
+  .doctor .presentacion .logoContainer .logo {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+  }
+    .doctor .presentacion p{
+      font-size: 0.8rem;
+      padding-bottom: 0px;
+      width: 80%;
+      
+  }
+    .doctor .presentacion p br{
+      display: none;
+      
+  }
+  .doctor .turnos{
+    padding: 20px 0px;
+    padding-left: 0px;
+    border-radius: 0px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around;
+  }
+  .doctor .turnos p{
+    
+    width: 50%;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+  }
+  .doctor .turnos br{
+    display: none;
+  }
+  .doctor .sobreMi{
+    padding: 30px 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .doctor .sobreMi h3 {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 2.5rem;
+  }
+  .doctor .sobreMi P{
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .doctor .sobreMi P br{
+    display: none;
+  }
+  
 </style>

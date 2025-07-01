@@ -14,6 +14,7 @@ import Cirugias from "../components/Cirugias";
       <h3>Las respuestas que necesita</h3>
     </div>
   </div>
+  <div class="tituloBottom"></div>
   <section>
     <div class="containerCirugia">
       <Cirugias client:load />
@@ -59,10 +60,18 @@ import Cirugias from "../components/Cirugias";
     margin: 0px;
     font-size: 3rem;
     color: #fefefe;
+    font-family: "Supreme-Variable", sans-serif;
+    line-height: 1;
   }
   .titulo h3 {
     margin: 0px;
     color: #fefefe;
+    font-family: "Supreme-Variable", sans-serif;
+  }
+  .tituloBottom {
+    width: 100%;
+    height: 30px;
+    background-color: #fff1d0;
   }
   section {
     display: flex;
@@ -81,6 +90,7 @@ import Cirugias from "../components/Cirugias";
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: "Supreme-Variable", sans-serif;
   }
   .links {
     display: flex;

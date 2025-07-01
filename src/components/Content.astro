@@ -8,72 +8,74 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
 ---
 
 <section>
-  <div class="contentContainer">
-    <div class="content">
-      <div class="dato">
-        <div class="iconContainer">
-          <img src={icon.src} alt="" />
+  <div class="sectionContent">
+    <div class="contentContainer">
+      <div class="content">
+        <div class="dato">
+          <div class="iconContainer">
+            <img src={icon.src} alt="" />
+          </div>
+          <div class="textDato">
+            <h3>Consultorios</h3>
+            <p>Sedes, horarios y cómo pedir turno en CABA y GBA.</p>
+          </div>
         </div>
-        <div class="textDato">
-          <h3>Consultorios</h3>
-          <p>Sedes, horarios y cómo pedir turno en CABA y GBA.</p>
-        </div>
-      </div>
-      <div class="datoButton">
-        <a href="/consultorios">VER MÁS</a>
-      </div>
-    </div>
-    <div class="content">
-      <div class="dato">
-        <div class="iconContainer">
-          <img src={icon2.src} alt="" />
-        </div>
-        <div class="textDato">
-          <h3>Pre Quirurgico</h3>
-          <p>Pasos y recomendaciones antes de una cirugía.</p>
+        <div class="datoButton">
+          <a href="/consultorios">VER MÁS</a>
         </div>
       </div>
-      <div class="datoButton">
-        <a href="/quirurgico">VER MÁS</a>
-      </div>
-    </div>
-    <div class="content">
-      <div class="dato">
-        <div class="textDato">
-          <h3>Podcast</h3>
-          <p>
-            Programas de radio que explican patologias frecuentes y no tan
-            frecuentes, para escuchar on demand.
-          </p>
+      <div class="content">
+        <div class="dato">
+          <div class="iconContainer">
+            <img src={icon2.src} alt="" />
+          </div>
+          <div class="textDato">
+            <h3>Pre Quirurgico</h3>
+            <p>Pasos y recomendaciones antes de una cirugía.</p>
+          </div>
+        </div>
+        <div class="datoButton">
+          <a href="/quirurgico">VER MÁS</a>
         </div>
       </div>
-      <div class="linksButton">
-        <a href="/">
-          <FaSpotify fontSize={36} color="rgb(163, 163, 163)" />
-        </a>
-        <a href="/" style={{ backgroundColor: "rgb(163, 163, 163)" }}>
-          <FaYoutube fontSize={20} />
-        </a>
-        <a href="/">
-          <img src={ivoox.src} alt="" class="ivooxIcon" />
-        </a>
-      </div>
-    </div>
-    <div class="content">
-      <div class="dato">
-        <div class="iconContainer">
-          <img src={icon3.src} alt="" />
+      <div class="content">
+        <div class="dato">
+          <div class="textDato">
+            <h3>Podcast</h3>
+            <p>
+              Programas de radio que explican patologias frecuentes y no tan
+              frecuentes, para escuchar on demand.
+            </p>
+          </div>
         </div>
-        <div class="textDato">
-          <h3>
-            Patologias <br />
-            Ambulatorias
-          </h3>
-          <p>Procedimientos simples, sin internación.</p>
+        <div class="linksButton">
+          <a href="/">
+            <FaSpotify fontSize={36} color="rgb(163, 163, 163)" />
+          </a>
+          <a href="/" style={{ backgroundColor: "rgb(163, 163, 163)" }}>
+            <FaYoutube fontSize={20} />
+          </a>
+          <a href="/">
+            <img src={ivoox.src} alt="" class="ivooxIcon" />
+          </a>
         </div>
       </div>
-      <div class="datoButton">
-        <a href="/patologias">VER MÁS</a>
+      <div class="content">
+        <div class="dato">
+          <div class="iconContainer">
+            <img src={icon3.src} alt="" />
+          </div>
+          <div class="textDato">
+            <h3>
+              Patologias <br />
+              Ambulatorias
+            </h3>
+            <p>Procedimientos simples, sin internación.</p>
+          </div>
+        </div>
+        <div class="datoButton">
+          <a href="/patologias">VER MÁS</a>
+        </div>
       </div>
     </div>
   </div>
@@ -82,13 +84,18 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
 <style>
   section {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 30%;
+    justify-content: flex-start;
+
     padding-bottom: 250px;
     height: fit-content;
     background-color: #1f3147;
 
     padding-top: 40px;
+  }
+  .sectionContent {
+    width: 62%;
+    display: flex;
+    justify-content: flex-end;
   }
   .contentContainer {
     display: flex;
@@ -102,15 +109,16 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
   .content {
     background-color: #fef5e4;
     height: fit-content;
-    width: 390px;
+    width: 400px;
     border-radius: 15px;
     padding-top: 20px;
   }
+
   .dato {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 90px;
+    height: fit-content;
     padding-left: 20px;
   }
   .iconContainer {
@@ -126,12 +134,16 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
     object-fit: cover;
   }
   .textDato {
-    width: 70%;
+    width: 80%;
+    height: 120px;
   }
   .textDato h3 {
     margin: 0;
+
     font-size: 1.9rem;
     color: #1f3147;
+    font-family: "Supreme-Variable", sans-serif;
+    line-height: 1;
   }
   .textDato p {
     margin: 0;
@@ -139,12 +151,15 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
     color: #1f3147;
     width: 90%;
     padding: 10px 0px;
+    font-family: "Supreme-Variable", sans-serif;
   }
   .datoButton {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 20px;
+    padding-top: 0px;
+    height: 36px;
   }
   .datoButton a {
     background-color: #fccfa8;
@@ -153,11 +168,14 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
     text-decoration: none;
     border-radius: 20px;
     font-size: 0.7rem;
+    font-family: "Supreme-Variable", sans-serif;
   }
   .linksButton {
     display: flex;
     align-items: center;
     padding: 20px;
+    padding-top: 0px;
+
     gap: 5px;
   }
   .linksButton a {
@@ -176,4 +194,21 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
     object-fit: cover;
     filter: grayscale(100%);
   }
+  @media screen and (max-width: 768px) {
+    section {
+      justify-content: center;
+    }
+    .sectionContent {
+      
+      width: 100%;
+      justify-content: center;
+    }
+    .contentContainer {
+      width: 100%;
+      
+    }
+    .content {
+      width: 80%;
+      margin-bottom: 20px;
+    }
 </style>

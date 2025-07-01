@@ -13,6 +13,7 @@ import Patologia from "../components/Patologia.jsx";
       <h1>Patología <br />ambulatoria</h1>
     </div>
   </div>
+  <div class="tituloBottom"></div>
   <section>
     <div class="containerCirugia">
       <Patologia client:load />
@@ -58,10 +59,17 @@ import Patologia from "../components/Patologia.jsx";
     margin: 0px;
     font-size: 3rem;
     color: #fefefe;
+    font-family: "Supreme-Variable", sans-serif;
+    line-height: 1;
   }
   .titulo h3 {
     margin: 0px;
     color: #fefefe;
+  }
+  .tituloBottom {
+    width: 100%;
+    height: 30px;
+    background-color: #fff1d0;
   }
   section {
     display: flex;
@@ -80,6 +88,7 @@ import Patologia from "../components/Patologia.jsx";
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: "Supreme-Variable", sans-serif;
   }
   .links {
     display: flex;
@@ -99,6 +108,7 @@ import Patologia from "../components/Patologia.jsx";
     font-size: 1rem;
     text-decoration: none;
     padding: 5px 20px;
+    font-family: "Supreme-Variable", sans-serif;
   }
   .links .doc {
     background-color: #203147;
