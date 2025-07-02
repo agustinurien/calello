@@ -11,6 +11,7 @@ import Patologia from "../components/Patologia.jsx";
     </div>
     <div>
       <h1>Patología <br />ambulatoria</h1>
+      <h3>Las respuestas que necesita</h3>
     </div>
   </div>
   <div class="tituloBottom"></div>
@@ -57,14 +58,19 @@ import Patologia from "../components/Patologia.jsx";
   }
   .titulo h1 {
     margin: 0px;
+    margin-bottom: 10px;
+    width: 400px;
     font-size: 3rem;
     color: #fefefe;
     font-family: "Supreme-Variable", sans-serif;
     line-height: 1;
+    font-weight: 600;
   }
   .titulo h3 {
     margin: 0px;
     color: #fefefe;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 400;
   }
   .tituloBottom {
     width: 100%;
@@ -82,6 +88,7 @@ import Patologia from "../components/Patologia.jsx";
     display: flex;
     justify-content: center;
     gap: 50px;
+    width: 100%;
   }
   .dudas {
     display: flex;
@@ -113,5 +120,23 @@ import Patologia from "../components/Patologia.jsx";
   .links .doc {
     background-color: #203147;
     color: #ffffff;
+  }
+  @media screen and (max-width: 1150px) {
+    .containerCirugia {
+      gap: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .containerCirugia {
+      flex-direction: column;
+      align-items: center;
+    }
+    .titulo .iconContainer {
+      display: none;
+    }
+    .titulo {
+      padding: 0px 6%;
+      font-size: 0.8rem;
+    }
   }
 </style>

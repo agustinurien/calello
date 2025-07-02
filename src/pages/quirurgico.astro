@@ -1,15 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import icon from "../assets/images/icon.png";
+import icon2 from "../assets/images/icon2.png";
 import Cirugias from "../components/Cirugias";
 ---
 
 <Layout>
   <div class="titulo">
     <div class="iconContainer">
-      <img src={icon.src} alt="" />
+      <img src={icon2.src} alt="" />
     </div>
-    <div>
+    <div class="textContainer">
       <h1>¿Que deberia hacer antes <br />de una cirugía?</h1>
       <h3>Las respuestas que necesita</h3>
     </div>
@@ -30,6 +30,9 @@ import Cirugias from "../components/Cirugias";
 </Layout>
 
 <style>
+  .textContainer {
+    width: fit-content;
+  }
   .titulo {
     height: 200px;
     width: 100%;
@@ -58,15 +61,19 @@ import Cirugias from "../components/Cirugias";
   }
   .titulo h1 {
     margin: 0px;
+    margin-bottom: 10px;
+    width: 100%;
     font-size: 3rem;
     color: #fefefe;
     font-family: "Supreme-Variable", sans-serif;
     line-height: 1;
+    font-weight: 600;
   }
   .titulo h3 {
     margin: 0px;
     color: #fefefe;
     font-family: "Supreme-Variable", sans-serif;
+    font-weight: 400;
   }
   .tituloBottom {
     width: 100%;
@@ -84,6 +91,7 @@ import Cirugias from "../components/Cirugias";
     display: flex;
     justify-content: center;
     gap: 50px;
+    width: 100%;
   }
   .dudas {
     display: flex;
@@ -114,5 +122,47 @@ import Cirugias from "../components/Cirugias";
   .links .doc {
     background-color: #203147;
     color: #ffffff;
+  }
+  @media screen and (max-width: 1150px) {
+    .containerCirugia {
+      gap: 20px;
+    }
+    .titulo {
+      padding: 0px 4%;
+      gap: 20px;
+    }
+    .titulo .iconContainer {
+      width: 120px;
+      height: 120px;
+    }
+    .textContainer h1 {
+      font-size: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .containerCirugia {
+      flex-direction: column;
+      align-items: center;
+    }
+    .titulo .iconContainer {
+      display: none;
+    }
+    .titulo {
+      padding: 0px 6%;
+      font-size: 0.8rem;
+    }
+    .textContainer h1 {
+      font-size: 2rem;
+    }
+    .dudas {
+      font-size: 0.8rem;
+    }
+    .links {
+      gap: 10px;
+    }
+    .links a {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+    }
   }
 </style>

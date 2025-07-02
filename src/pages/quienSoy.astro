@@ -1,8 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import compa from "../assets/images/imagenes2/compa.jpeg";
+import selfie from "../assets/images/imagenes2/selfie.jpeg";
+import equipo from "../assets/images/imagenes2/equipo.jpeg";
+import bn from "../assets/images/imagenes2/bn.jpeg";
+import zoom from "../assets/images/imagenes2/zoom.jpeg";
+import operacion from "../assets/images/imagenes2/operacion.jpeg";
+
 import fotoPrueba from "../assets/images/imagenes2/fotoPrueba.jpg";
 import hospital from "../assets/images/hospital.png";
-import anteojos from "../assets/images/imagenes2/anteojos.jpg";
+import anteojos from "../assets/images/imagenes2/anteojos.png";
+import insta from "../assets/images/imagenes2/insta.png";
+import insta2 from "../assets/images/imagenes2/insta2.png";
+import insta3 from "../assets/images/imagenes2/insta3.png";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,32 +23,32 @@ import {
 
 const fotos = [
   {
-    src: fotoPrueba.src,
+    src: compa.src,
     texto:
       "Con la Dra. Silvana Prodan, cirujana, compañera y amiga. Un lujo compartir este camino.",
   },
   {
-    src: fotoPrueba.src,
+    src: selfie.src,
     texto:
       "Con el Dr. Luigi Dall'Oglio, cirujano pediátrico italiano y referente en trabajo en equipo y dedicación a la medicina. Un verdadero modelo profesional con quien tuve el honor de rotar en el Ospedale Bambino Gesu de Italia.",
   },
   {
-    src: fotoPrueba.src,
+    src: equipo.src,
     texto:
       "Mi equipo de residentes. En las malas y en las buenas, siempre con ellos. Gracias por tanto, compañeros de camino",
   },
   {
-    src: fotoPrueba.src,
+    src: bn.src,
     texto:
       "Con algunas de las tantas instrumentadoras que hacen que cada día en quirófano sea más fácil. Gracias por tanto trabajo y buena onda.",
   },
   {
-    src: fotoPrueba.src,
+    src: zoom.src,
     texto:
       "La forma de trabajar cambió, Silvana Prodan pero las personas no. Seguimos Santiago Calello siendo el mismo equipo, con las mismas ganas de siempre.",
   },
   {
-    src: fotoPrueba.src,
+    src: operacion.src,
     texto:
       "Con el Dr. Tomás Vainstein, anestesiólogo y amigo. Así, todo es más fácil",
   },
@@ -179,10 +190,10 @@ const fotos = [
           allowfullscreen></iframe>
         <div class="redesFotos">
           <div class="publicacionContainer">
-            <img src="" alt="" />
+            <img src={insta.src} alt="" />
           </div>
           <div class="publicacionContainer">
-            <img src="" alt="" />
+            <img src={insta2.src} alt="" />
           </div>
           <div class="publicacionContainer">
             <img src={anteojos.src} alt="" />
@@ -191,7 +202,7 @@ const fotos = [
             <img src={fotoPrueba.src} alt="" />
           </div>
           <div class="publicacionContainer">
-            <img src="" alt="" />
+            <img src={insta3.src} alt="" />
           </div>
         </div>
         <div class="redes">
@@ -393,6 +404,10 @@ const fotos = [
     line-height: 1.2;
     font-family: "Supreme-Variable", sans-serif;
   }
+  .hospitalMaterno3 .textoHospital strong {
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 800;
+  }
   .hospitalMaterno .textoHospital p {
     color: white;
   }
@@ -496,5 +511,126 @@ const fotos = [
     width: 40px;
     height: 40px;
     font-size: 1.6rem;
+  }
+
+  @media screen and (max-width: 1050px) {
+    .titulo {
+      width: 90%;
+    }
+    .textoQuienSoy {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .textoQuienSoy p {
+      width: 100%;
+    }
+    .gridFotosContainer {
+      width: 90%;
+    }
+    .hospitalMaterno {
+      flex-direction: column;
+      width: 90%;
+    }
+    .hospitalMaterno2 {
+      flex-direction: column;
+      width: 90%;
+    }
+    .hospitalMaterno3 {
+      width: 90%;
+    }
+    .hospitalMaterno3 .textoHospital p {
+      font-size: 1.5rem;
+    }
+    .hospitalMaterno3 .textoHospital a {
+      font-size: 1rem;
+      margin-top: 15px;
+      height: 30px;
+      width: 100px;
+    }
+    .hospitalContent {
+      flex-direction: row;
+      width: 100%;
+      gap: 20px;
+    }
+    .hospitalLogoContainer {
+      padding-top: 0px;
+    }
+    .textoHospital {
+      width: 100%;
+    }
+    .fila-1 {
+      grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+      grid-template-rows: 1fr;
+    }
+    .fila-2 {
+      grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+      grid-template-rows: 1fr;
+    }
+    .fotoItem.foto-0 {
+      grid-column: 1; /* Columna izquierda */
+      grid-row: 1;
+    }
+
+    .fotoItem.foto-1 {
+      grid-column: 2; /* Columna derecha */
+      grid-row: 1;
+    }
+
+    .fotoItem.foto-2 {
+      grid-column: 1 / span 2; /* Abarca las 2 columnas */
+      grid-row: 2; /* Segunda fila */
+      height: 400px; /* Puede tener más altura si querés */
+    }
+    .fotoItem.foto-3 {
+      grid-column: 1; /* Columna izquierda */
+      grid-row: 1;
+    }
+
+    .fotoItem.foto-4 {
+      grid-column: 2; /* Columna derecha */
+      grid-row: 1;
+    }
+
+    .fotoItem.foto-5 {
+      grid-column: 1 / span 2; /* Abarca las 2 columnas */
+      grid-row: 2; /* Segunda fila */
+      height: 400px; /* Puede tener más altura si querés */
+    }
+    .fotoItem.foto-0 p {
+      width: 100%;
+    }
+    .fotoItem.foto-1 p {
+      width: 100%;
+    }
+    .fotoItem.foto-2 p {
+      width: 100%;
+    }
+    .fotoItem.foto-3 p {
+      width: 100%;
+    }
+    .fotoItem.foto-4 p {
+      width: 100%;
+    }
+    .fotoItem.foto-5 p {
+      width: 100%;
+    }
+    .c5nContainer {
+      width: 100%;
+    }
+    .c5n {
+      width: 90%;
+    }
+    .redesFotos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      width: 100%;
+      height: fit-content;
+    }
+    .redes h4 {
+      font-size: 2rem;
+    }
   }
 </style>
