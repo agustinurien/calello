@@ -42,7 +42,7 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
       <div class="content">
         <div class="pronto">
           <h2>
-            PRONTO
+            PROXIMAMENTE
           </h2>
         </div>
         <div class="dato">
@@ -130,8 +130,11 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
     border-radius: 15px;
     z-index: 1;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: flex-end;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    padding-right: 20px;
   }
   .pronto h2{
     color: white;
@@ -246,5 +249,22 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
     .content {
       width: 80%;
       margin-bottom: 20px;
+    }
+    .content .iconContainer{
+      display: none;
+    }
+    .content .dato p{
+      
+      width: 100%;
+    }
+    .content .linksButton {
+      opacity: 0;
+    }
+    .pronto {
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-bottom: 10px;
+      padding-left: 18px;
+      box-sizing: border-box;
     }
 </style>
