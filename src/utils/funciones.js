@@ -1,5 +1,11 @@
 import { db } from "./firebaseConfig";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+} from "firebase/firestore";
 
 async function fetchPatologiasPosts() {
   const documentRef = collection(db, "patologias");
@@ -27,4 +33,16 @@ async function uploadPatologiaPost({ nombre, resumen, explicacion }) {
   }
 }
 
-export { fetchPatologiasPosts, uploadPatologiaPost };
+async function deletePatologiaPost(id) {
+  console.log("Deleting patologia post with ID:", id);
+  try {
+    const docRef = doc(db, "patologias", id);
+    await deleteDoc(docRef);
+    console.log("Patologia post deleted with ID:", id);
+    return true;
+  } catch (e) {
+    console.error("Error deleting patologia post:", e);
+  }
+}
+
+export { fetchPatologiasPosts, uploadPatologiaPost, deletePatologiaPost };

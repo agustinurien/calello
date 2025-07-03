@@ -10,12 +10,13 @@ import logo1 from "../assets/images/logo1.png";
 ---
 
 <nav>
-  <div class="left">
+  <a href="/" class="left">
     <div class="contenedorLogo">
       <img src={logo1.src} alt="logo" class="logo1" />
     </div>
     <h2>Dr. Santiago Calello</h2>
-  </div>
+  </a>
+  <button class="open">☰</button>
   <div class="right">
     <ul>
       <li><a href="/">Inicio</a></li>
@@ -26,19 +27,50 @@ import logo1 from "../assets/images/logo1.png";
     </ul>
     <div class="socialContainer">
       <div class="social">
-        <a href=""><FaInstagram /></a>
-        <a href=""><FaFacebookF /></a>
-        <a href=""><FaLinkedinIn /></a>
+        <a href="https://www.instagram.com/docsanticalello/"><FaInstagram /></a>
+
+        <a href="https://www.linkedin.com/in/santiago-e-m-calello-55008418/"
+          ><FaLinkedinIn /></a
+        >
       </div>
       <div class="wpp">
-        <a href="" class="wppIcon"><FaWhatsapp /></a>
-        <a href="" class="contactar">CONTACTAR</a>
+        <a href="https://wa.me/5491156543649" class="wppIcon"><FaWhatsapp /></a>
+        <a href="https://wa.me/5491156543649" class="contactar">CONTACTAR</a>
       </div>
     </div>
   </div>
 </nav>
 
+<script>
+  const openButton = document.querySelector(".open");
+  const right = document.querySelector(".right");
+
+  openButton.addEventListener("click", () => {
+    right.classList.toggle("active");
+    openButton.classList.toggle("active");
+
+    // Cambiar el contenido del botón
+    if (openButton.classList.contains("active")) {
+      openButton.textContent = "x"; // o "X"
+    } else {
+      openButton.textContent = "☰"; // hamburguesa
+    }
+  });
+
+  // Cerrar el menú al hacer clic fuera
+  document.addEventListener("click", (event) => {
+    if (!right.contains(event.target) && !openButton.contains(event.target)) {
+      right.classList.remove("active");
+      openButton.classList.remove("active");
+      openButton.textContent = "☰"; // volver al ícono hamburguesa
+    }
+  });
+</script>
+
 <style>
+  .open {
+    display: none;
+  }
   nav {
     position: fixed;
     top: 0;
@@ -50,13 +82,18 @@ import logo1 from "../assets/images/logo1.png";
     justify-content: space-between;
     width: 100%;
     z-index: 1000;
-    padding: 0px 9%;
+
     box-sizing: border-box;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.455);
   }
   .left {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
+
+    width: 26%;
   }
   .left .contenedorLogo {
     height: 70px;
@@ -76,6 +113,7 @@ import logo1 from "../assets/images/logo1.png";
   .right {
     display: flex;
     gap: 20px;
+    padding-right: 8%;
   }
   .right ul {
     display: flex;
@@ -143,5 +181,106 @@ import logo1 from "../assets/images/logo1.png";
     justify-content: center;
     align-items: center;
     font-size: 20px;
+  }
+  @media screen and (max-width: 1300px) {
+    .left {
+      padding-left: 20px;
+      justify-content: flex-start;
+    }
+    .left h2 {
+      font-size: 1rem;
+    }
+    .right {
+      padding-right: 20px;
+      gap: 15px;
+    }
+    .right ul {
+      padding-left: 10px;
+    }
+    .right ul li a {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .wpp .contactar {
+      display: none;
+    }
+    .socialContainer {
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    .socialContainer .social a {
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
+    }
+    .wpp .wppIcon {
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
+    }
+    @media screen and (max-width: 768px) {
+      .open {
+        display: flex;
+        position: relative;
+        z-index: 1001;
+        color: white;
+        background-color: transparent;
+        border: none;
+        padding-right: 20px;
+        font-size: 2rem;
+      }
+
+      nav {
+      }
+
+      .socialContainer {
+        justify-content: flex-start;
+      }
+      .right {
+        display: none;
+        width: 200px;
+        height: 100vh;
+        justify-content: flex-start;
+
+        background-color: #1f3147;
+        padding: 40px 20px;
+      }
+      .right.active {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 40px;
+        width: 200px;
+        height: 100vh;
+        justify-content: flex-start;
+
+        background-color: #1f3147;
+        padding: 40px 20px;
+      }
+      .right ul {
+        flex-direction: column;
+        padding: 0px;
+      }
+      .right ul li {
+        justify-content: flex-start;
+      }
+
+      .left {
+        box-sizing: border-box;
+        width: 100%;
+        gap: 10px;
+        padding-right: 20px;
+        height: 40px;
+      }
+      .left h2 {
+        font-size: 1.5rem;
+      }
+      .left ul {
+        padding: 0px;
+      }
+    }
   }
 </style>
