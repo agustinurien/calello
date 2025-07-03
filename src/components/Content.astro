@@ -39,6 +39,11 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
         </div>
       </div>
       <div class="content">
+        <div class="pronto">
+          <h2>
+            PRONTO
+          </h2>
+        </div>
         <div class="dato">
           <div class="textDato">
             <h3>Podcast</h3>
@@ -107,11 +112,33 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
     width: 900px;
   }
   .content {
+    position: relative;
     background-color: #fef5e4;
     height: fit-content;
     width: 400px;
     border-radius: 15px;
     padding-top: 20px;
+  }
+  .pronto{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000061;
+    border-radius: 15px;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .pronto h2{
+    color: white;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 1.5rem;
+    margin: 0px;
+    padding-top: 20px;
+    padding-right: 20px;
   }
 
   .dato {
