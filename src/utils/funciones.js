@@ -45,4 +45,52 @@ async function deletePatologiaPost(id) {
   }
 }
 
-export { fetchPatologiasPosts, uploadPatologiaPost, deletePatologiaPost };
+async function fetchConsultoriosPosts() {
+  const documentRef = collection(db, "consultorios");
+  const snapshot = await getDocs(documentRef);
+  const postsData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  postsData.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  return postsData;
+}
+
+async function deleteConsultorioPost(id) {
+  console.log("Deleting consultorio post with ID:", id);
+  try {
+    const docRef = doc(db, "consultorios", id);
+    await deleteDoc(docRef);
+    console.log("Consultorio post deleted with ID:", id);
+    return true;
+  } catch (e) {
+    console.error("Error deleting consultorio post:", e);
+  }
+}
+
+async function uploadConsultorioPost({ nombre, direccionModalidad, masInformacion, adicional, linkConsultorio }) {
+  console.log("Uploading consultorio post:", { nombre, direccionModalidad });
+  if (!nombre || !direccionModalidad) {
+    console.error("Nombre o dirección/modalidad faltante.");
+    return;
+  }
+  try {
+    const docRef = await addDoc(collection(db, "consultorios"), {
+      nombre,
+      direccionModalidad,
+      masInformacion,
+      adicional,
+      linkConsultorio,
+    });
+    console.log("Consultorio post created with ID:", docRef.id);
+  } catch (e) {
+    console.error("Error uploading consultorio post:", e);
+  }
+}
+
+
+export {
+  fetchPatologiasPosts,
+  uploadPatologiaPost,
+  deletePatologiaPost,
+  uploadConsultorioPost,
+  fetchConsultoriosPosts,
+  deleteConsultorioPost
+};

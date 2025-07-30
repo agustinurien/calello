@@ -83,7 +83,9 @@ const Patologia = () => {
                   </div>
                   {openItemsCol1[index] && (
                     <div className="texto">
-                      <p>{item.explicacion}</p>
+                      {item.explicacion.split('\n').map((linea, i) => (
+                        <p key={i}>{linea}</p>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -110,7 +112,9 @@ const Patologia = () => {
                   </div>
                   {openItemsCol2[index] && (
                     <div className="texto">
-                      <p>{item.explicacion}</p>
+                      {item.explicacion.split('\n').map((linea, i) => (
+                        <p key={i}>{linea}</p>
+                      ))}
                     </div>
                   )}
                 </div>

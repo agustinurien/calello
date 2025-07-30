@@ -7,8 +7,10 @@ import swiss from "../assets/images/swiss.png";
 import christian from "../assets/images/christian.png";
 import { CiCircleInfo } from "react-icons/ci";
 import icon from "../assets/images/icon.png";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import Consultorio from "../components/Consultorio";
+
 ---
 
 <Layout>
@@ -283,31 +285,10 @@ import { IoIosMail } from "react-icons/io";
             </p>
           </div>
         </div>
+        
       </div>
     </div>
-
-    <div class="consultorioContainerSinImage">
-      <div class="consultorioText">
-        <div class="detalles">
-          <div class="especialidad">
-            <h3>Consultorio <br />Christian Boggio <br />Mazet y Equipo</h3>
-          </div>
-          <div class="detallesText">
-            <p>
-              Dirección: <br />Aguilar 2073 – Belgrano, CABA <br /><br
-              />Atención: <br />Médico Consultor.
-            </p>
-            <p>
-              Especialidades: <br />Consultorio dedicado a la atención de <br />
-              pacientes con trastornos del piso <br />pelviano, incontinencia y
-              constipación. <br /><br />Turnos: <br />Solicitá tu turno llamando
-              al <br />11 5654 3649.
-            </p>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <Consultorio client:load />
   </section>
 </Layout>
 
