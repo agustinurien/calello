@@ -59,6 +59,7 @@
   padding-left: 25px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+  
 }
 .openText p {
   margin: 0px;
@@ -76,11 +77,13 @@
   height: fit-content;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+  font-family: "Supreme-Variable", sans-serif;
+  border-top: #203147 1px solid;
 }
 .texto p {
   margin: 0px;
   padding: 20px 25px;
-  border-top: #203147 1px solid;
+  
 }
 
 @media screen and (max-width: 1180px) {
