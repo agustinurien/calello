@@ -1,5 +1,5 @@
 ---
-import calello from "../assets/images/calello.png";
+import calello from "../assets/images/calello2.png";
 import logo from "../assets/images/logo.png";
 ---
 
@@ -117,6 +117,7 @@ import logo from "../assets/images/logo.png";
     border-bottom-left-radius: 30px;
     display: flex;
     flex-direction: column;
+    z-index: 3;
     
   }
   .doctor .presentacion {
@@ -245,15 +246,16 @@ import logo from "../assets/images/logo.png";
     justify-content: flex-end;
     height: 550px;
     width: 67%;
+    z-index: 1;
     
     
-    overflow: hidden;
   }
   .heroImage img {
+    transform: scale(1.3);
+    height: 100%;
+    width: 80%;
+    object-fit: contain;
     
-    height: 110%;
-    width: 700px;
-    object-fit: cover;
   }
   @media (max-width: 1400px) {
     .titleContainer2 {
@@ -273,13 +275,13 @@ import logo from "../assets/images/logo.png";
     align-items: flex-end;
     justify-content: flex-end;
     height: 550px;
-    width: 100%;
+    width: 85%;
     
     
     overflow: hidden;
   }
   .heroImage img {
-    width: 100%;
+    width: 63%;
     height: auto;
     
   }
@@ -320,7 +322,8 @@ import logo from "../assets/images/logo.png";
   }
   @media (max-width: 768px) {
     .titleContainer2 {
-      padding-left: 20px;
+      padding-left: 40px;
+      padding-top: 40px;
       
     }
     .heroTitle {
@@ -335,19 +338,22 @@ import logo from "../assets/images/logo.png";
     .heroContainer {
       width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content:flex-end;
       align-items: center;
-      padding-top: 20px;
+      padding-top: 0px;
     }
     .heroImage {
       width: 100%;
-      
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
       
     }
+    
     .heroImage img{
-      width: 100%;
-      height: 75%;
-      
+      width: 80%;
+      height: 100%;
+      object-fit: contain;
     }
     .doctor {
       position: relative;
@@ -446,5 +452,42 @@ import logo from "../assets/images/logo.png";
   .doctor .sobreMi P br{
     display: none;
   }
-  
+  }
+  @media (max-width: 650px) {
+    .heroImage{
+      align-items: flex-end;
+      justify-content: flex-end;
+      
+    }
+    .heroImage img {
+      width: 78%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .titleContainer2{
+      padding-left: 30px;
+      padding-top: 30px;
+
+    }
+    
+  }
+  @media (max-width: 500px) {
+    .heroImage{
+      align-items: flex-end;
+      justify-content: flex-end;
+      
+    }
+    .heroImage img {
+      width: 90%;
+      height: 70%;
+      object-fit: contain;
+    }
+    .titleContainer2{
+      padding-left: 30px;
+      padding-top: 10px;
+
+    }
+
+    
+  }
 </style>
