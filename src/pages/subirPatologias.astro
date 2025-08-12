@@ -1,6 +1,6 @@
 ---
 export const prerender = false;
-// filepath: c:\Users\User\Documents\AGUSTIN URIEN\TAPE\calello\src\pages\subirPatologias.astro
+
 import Layout from "../layouts/Layout.astro";
 import SubirPatologia from "../components/subirPatologia/SubirPatologia";
 ---
@@ -41,15 +41,23 @@ import SubirPatologia from "../components/subirPatologia/SubirPatologia";
   }
 
   if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      errorMsg.style.display = 'none';
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorMsg.style.display = 'none';
+
+    try {
       const formData = new FormData(form);
       const res = await fetch('/api/login', {
         method: 'POST',
         body: formData,
       });
+
+      if (!res.ok) {
+        throw new Error(`Error en la respuesta: ${res.status} ${res.statusText}`);
+      }
+
       const data = await res.json();
+
       if (data.autorizado) {
         localStorage.setItem("autorizado", "true");
         loginArea.style.display = "none";
@@ -57,8 +65,13 @@ import SubirPatologia from "../components/subirPatologia/SubirPatologia";
       } else {
         errorMsg.style.display = 'block';
       }
-    });
-  }
+    } catch (error) {
+      console.error("Error en el login:", error);
+      errorMsg.textContent = "Ocurrió un error. Intenta nuevamente.";
+      errorMsg.style.display = 'block';
+    }
+  });
+}
 </script>
 
 
