@@ -44,17 +44,19 @@ import SubirPatologia from "../components/subirPatologia/SubirPatologia";
     errorMsg.style.display = 'none';
 
     try {
-      const formData = new FormData(form);
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        body: formData,
-      });
+  console.log('Enviando login POST');
+  const formData = new FormData(form);
+  const res = await fetch('/api/login', {
+    method: 'POST',
+    body: formData,
+  });
 
-      if (!res.ok) {
-        throw new Error(`Error en la respuesta: ${res.status} ${res.statusText}`);
-      }
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Error en la respuesta: ${res.status} ${res.statusText} - ${text}`);
+  }
 
-      const data = await res.json();
+  const data = await res.json();
 
       if (data.autorizado) {
         localStorage.setItem("autorizado", "true");
