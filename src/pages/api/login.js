@@ -1,4 +1,14 @@
 
+export async function ALL({ request }) {
+    return new Response(
+        JSON.stringify({ message: `Recibido método ${request.method}` }),
+        {
+            status: 200,
+            headers: { "Content-Type": "application/json" },
+        }
+    );
+}
+
 async function validarContraseña(password) {
     const contraseñaValida = import.meta.env.SECRET_PASS;
     if (!contraseñaValida) {
