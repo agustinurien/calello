@@ -1,0 +1,530 @@
+---
+import Layout from "../layouts/Layout.astro";
+import lirios from "../assets/images/lirios.png";
+import trinidad from "../assets/images/trinidad.jpeg";
+import gcp from "../assets/images/gcp.png";
+import swiss from "../assets/images/swiss.png";
+import christian from "../assets/images/christian.png";
+import { CiCircleInfo } from "react-icons/ci";
+import icon from "../assets/images/icon.png";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import Consultorio from "../components/Consultorio";
+
+---
+
+<Layout>
+  <div class="titulo">
+    <div class="iconContainer">
+      <img src={icon.src} alt="" />
+    </div>
+    <h1>Consultorios <br />Médicos</h1>
+  </div>
+  <div class="disclaimer">
+    <CiCircleInfo fontSize={40} />
+    <p>
+      Para una atención más ágil, solicitá turno por teléfono,<br /> mail o online.
+      Consultá previamente si tu obra social está<br /> incluida o preguntá por atención
+      particular.
+    </p>
+  </div>
+  <section>
+    <div class="consultorioContainer">
+      <div class="consultorioImage">
+        <div class="logoContainer">
+          <img src={lirios.src} alt="" class="logoConsultorio" />
+        </div>
+      </div>
+
+      <div class="consultorioText">
+        <div class="detalles">
+          <div class="especialidad">
+            <h3>
+              Lirios del Talar <br />(consultas <br />privadas, OSDE <br />y
+              SMG)
+            </h3>
+          </div>
+          <div class="detallesText">
+            <p>
+              Dirección: <br />
+              Gral. José Gervasio Artigas 3188, 1617 General Pacheco, Buenos Aires.
+              <br />
+              (A 7 km del centro de General Pacheco)
+            </p>
+            <p>
+              Atención: <br />
+              Niños y adolescentes con distintas <br />patologías quirúrgicas,
+              con un enfoque <br />centrado en el cuidado integral del <br
+              />paciente y su familia
+            </p>
+            <p>
+              Desde la primera consulta, mi objetivo <br />es acompañar,
+              resolver y brindar <br /> tranquilidad
+            </p>
+          </div>
+        </div>
+        <div class="linkConsultorio">
+          <a href="https://www.docturno.com/gm/lirios-del-talar-grupo-medico"
+            >MÁS INFO</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="consultorioContainer">
+      <div class="consultorioImage">
+        <div class="logoContainer">
+          <img src={trinidad.src} alt="" class="logoConsultorio" />
+        </div>
+      </div>
+      <div class="consultorioText">
+        <div class="detalles">
+          <div class="especialidad">
+            <h3>Galeno <br /> Trinidad <br /> Cardiovascular</h3>
+          </div>
+          <div class="detallesText">
+            <p>
+              Dirección: <br /> Av. Sir Alexander Fleming 1049, San <br /> Isidro
+              (frente a los estudios de Telefe). <br /><br />Día y horario de
+              atención: Martes de 17 a 19 hs. Teléfonos: 4898-6700 / 6090-1953 /
+              6090-1963 / <br /> 6090-1990
+            </p>
+            <p>
+              Especialidades: <br /><br />Coordinación del equipo de cirugía
+              pediatrica <br />Cirugía General Pediátrica <br />Urología
+              Pediátrica <br />Cirugía Digestiva – Coloproctología <br /> Pediátrica
+            </p>
+            <p>
+              Turnos: <br /> Solicitá tu turno llamando a los teléfonos indicados
+              o a través de la aplicación de Galeno. <br /><br /> Importante: <br
+              />Recordá consultar la cobertura de tu <br /> obra social.
+            </p>
+          </div>
+        </div>
+        <div class="linkConsultorio">
+          <a
+            href="https://www.galeno.com.ar/centro-medico/trinidad-medical-center-san-isidro/"
+            >MÁS INFO</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="consultorioContainer">
+      <div class="consultorioImage">
+        <div class="logoContainer">
+          <img src={gcp.src} alt="" class="logoConsultorioGcp" />
+        </div>
+      </div>
+      <div class="consultorioText">
+        <div class="detalles">
+          <div class="especialidad">
+            <h3>Fundación <br />Hospitalaria</h3>
+          </div>
+          <div class="detallesText">
+            <p>
+              Dirección: <br />Cramer 4601 – Núñez <br /><br />Día y horario de
+              atención: Lunes de 14:00 a 16:00 hs. <br /><br />Teléfonos: <br
+              />4704-2300 <br /> +54 9 11 3080-7279
+            </p>
+            <p>
+              Web: <br />www.cirujanopediatra.com.ar <br /><br />Instagram:
+              @grupodecirugiapediatrica <br /><br />Especialidades: <br /><br
+              />Neuroestimulación <br />Sesiones de Biofeedback <br />Consultas
+              privadas por obra social <br />Consultorio de Cirugía General <br
+              />Pediátrica y Coloproctología Pediátrica. <br />Consultorio de
+              Rehabilitación de <br />
+              trastornos del suelo pélvico, <br />constipación e incontinencia
+              fecal.
+            </p>
+            <p>
+              Turnos: <br />Solicitá tu turno por teléfono o por mail. <br /><br
+              />
+              Importante: <br />Recordá consultar la cobertura de tu <br />obra
+              social.
+            </p>
+          </div>
+        </div>
+        <div class="linkConsultorio">
+          <a href="https://fh.org.ar/">MÁS INFO</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="consultorioContainer">
+      <div class="consultorioImage">
+        <div class="logoContainer">
+          <img src={swiss.src} alt="" class="logoConsultorio" />
+        </div>
+      </div>
+      <div class="consultorioText">
+        <div class="detalles">
+          <div class="especialidad">
+            <h3>Swiss <br />Medical <br />Center <br />Dot</h3>
+          </div>
+          <div class="detallesText">
+            <p>
+              Consultorio de Cirugía General <br />Pediátrica, Cirugía Digestiva
+              Pediátrica <br />y Urología Pediátrica <br /><br />Dirección: <br
+              />Vedia 3626 – Dot Baires Shopping, <br />Capital Federal
+            </p>
+            <p>
+              Día y horario de atención: <br />Lunes de 18 a 20 hs. <br /><br
+              />Central de turnos:
+              <br /> 0810-333-8876 <br />Solicite turno con anticipación.
+            </p>
+            <p>
+              Cobertura: <br />Solo Swiss Medical Grupo. <br />Recuerde
+              consultar la cobertura de su <br />obra social.
+            </p>
+          </div>
+        </div>
+        <div class="linkConsultorio">
+          <a
+            href="https://www.swissmedicalcenter.com.ar/centrosmedicos/dot_baires"
+            >MÁS INFO</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="consultorioContainer">
+      <div class="consultorioImage">
+        <div class="logoContainer">
+          <img src={christian.src} alt="" class="logoConsultorioChristian" />
+        </div>
+      </div>
+      <div class="consultorioText">
+        <div class="detalles">
+          <div class="especialidad">
+            <h3>Consultorio CCBM <br />– Dr. Boggio Marzet <br />& Equipo</h3>
+          </div>
+          <div class="detallesText">
+            <p>
+              Consultorio Médico: <br />Aguilar 2073, CABA 1426 <br /><br
+              />Atención: <br />Lunes a Jueves de 15:00 a 19:00 hs
+            </p>
+            <p>
+              Especialidad: <br />Gastroenterología Pediátrica – <br
+              />diagnóstico, tratamiento y seguimiento <br />de patologías
+              digestivas en niños y <br />adolescentes <br />Modalidad: <br
+              />Consultas presenciales (segmentación <br />por especialistas
+              dentro del grupo).
+            </p>
+            <p>
+              Contacto: <br />WhatsApp/ Teléfono: +54 11 3807-2050 <br />Email:
+              info@consultorioccbm.com.ar <br /><br />– Equipo
+              interdisciplinario con más de 10 años de trayectoria <br />
+              consultorioccbm.com.ar <br />– Doctor titular y equipo docente <br
+              />
+              vinculados a la UBA y Universidad del <br />Salvador
+            </p>
+          </div>
+        </div>
+        <div class="linkConsultorio">
+          <a href="https://www.consultorioccbm.com.ar">MÁS INFO</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="consultorioContainerSinImage">
+      <div class="consultorioText">
+        <div class="detalles">
+          <div class="especialidad">
+            <h3>Interconsultas <br /> virtuales</h3>
+          </div>
+          <div class="detallesText">
+            <p>
+              Modalidad: <br /> Online – Para pacientes locales y del <br /> exterior
+            </p>
+            <p>Atención: <br /> Día y horario a convenir con el Dr.</p>
+            <p>
+              Contacto: <br />
+              WhatsApp: +54 9 11 5654-3649 Email: calellosantiago@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="contactoConsultorio">
+          <a href="https://wa.me/5491156543649"
+            ><FaWhatsapp fontSize={20} color="white" /></a
+          >
+          <a href="mailto:calellosantiago@gmail.com"
+            ><IoIosMail fontSize={20} color="white" /></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="consultorioContainerSinImage">
+      <div class="consultorioText">
+        <div class="detalles">
+          <div class="especialidad">
+            <h3>
+              Pediatría Integral <br />
+              Ambulatoria
+            </h3>
+          </div>
+          <div class="detallesText">
+            <p>
+              Consultorio Médico <br />Chacabuco 630, PB-B – San Isidro <br
+              /><br />Atención: <br />
+              Médico Consultor – Horarios a <br />convenir.
+            </p>
+            <p>
+              Modalidad: <br />Solo consultas privadas. <br /><br />Contacto: <br
+              />
+              WhatsApp: +54 9 11 6009-2471 <br />Email: turnospia@gmail.com
+            </p>
+            <p>
+              Especialidades: <br />Atención en Cirugía General Pediátrica, <br
+              />
+              Trastornos Digestivos y Coloproctología <br />Pediátrica Compleja,
+              en un consultorio <br />integralmente dedicado a pacientes <br />
+              pediátricos. <br /><br />Importante: <br />Recordá consultar la
+              cobertura de tu <br />obra social.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+      <Consultorio client:load />
+  </section>
+</Layout>
+
+<style>
+  .titulo {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px;
+    align-items: center;
+    background-color: #4f7792;
+    margin-top: 90px;
+    padding: 0px 8%;
+    box-sizing: border-box;
+  }
+  .titulo .iconContainer {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .titulo .iconContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .titulo h1 {
+    margin: 0px;
+    font-size: 3rem;
+    color: #fefefe;
+    font-family: "Supreme-Variable", sans-serif;
+    line-height: 1;
+  }
+  section {
+    height: fit-content;
+    padding: 0px 13%;
+  }
+
+  .disclaimer {
+    display: flex;
+    gap: 20px;
+    padding: 30px 15%;
+    font-family: "Supreme-Variable", sans-serif;
+    line-height: 1;
+    color: #fefefe;
+    background-color: #141519;
+    height: 90px;
+  }
+  .disclaimer p {
+    margin: 0px;
+    font-size: 1.4rem;
+  }
+  .consultorioContainer {
+    height: fit-content;
+    padding-bottom: 100px;
+    border-bottom: 2px solid gray;
+  }
+  .consultorioContainerSinImage {
+    height: fit-content;
+    padding: 100px 0px;
+    border-bottom: 2px solid gray;
+  }
+
+  .consultorioContainer .consultorioImage {
+    height: 300px;
+    width: 600px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .consultorioContainer .logoContainer {
+    height: 100%;
+    width: 100%;
+  }
+  .consultorioContainer .logoConsultorio {
+    width: 75%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .consultorioContainer .logoConsultorioChristian {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .consultorioContainer .logoConsultorioGcp {
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .consultorioText {
+    height: fit-content;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .consultorioText .detalles {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 85%;
+  }
+  .consultorioText .detalles .especialidad {
+    width: 20%;
+    height: 100%;
+    font-family: "Supreme-Variable", sans-serif;
+  }
+  .especialidad h3 {
+    margin: 0px;
+  }
+  .detalles .detallesText {
+    display: flex;
+    flex-direction: flex-start;
+    gap: 15px;
+    height: 100%;
+    width: 70%;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 0.8rem;
+  }
+  .detalles .detallesText p {
+    margin: 0px;
+    width: 100%;
+  }
+  .linkConsultorio {
+    width: 10%;
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+  }
+  .linkConsultorio a {
+    padding: 7px 20px;
+    background-color: #000000;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: white;
+    text-decoration: none;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+  .contactoConsultorio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .contactoConsultorio a {
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (max-width: 1050px) {
+    .disclaimer {
+      padding: 20px 5%;
+      height: fit-content;
+    }
+    .disclaimer p br {
+      display: none;
+    }
+    .disclaimer p {
+      font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .titulo .iconContainer {
+      display: none;
+    }
+    section {
+      padding: 0px 5%;
+    }
+    .disclaimer {
+      padding: 20px 5%;
+      height: fit-content;
+    }
+    .disclaimer p br {
+      display: none;
+    }
+    .disclaimer p {
+      font-size: 1rem;
+    }
+    .consultorioContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .consultorioContainer .consultorioImage {
+      width: 100%;
+      height: 200px;
+    }
+    .consultorioContainer .logoContainer {
+      width: 100%;
+      height: 100%;
+    }
+    .consultorioContainer .logoConsultorio {
+      width: 100%;
+      height: 100%;
+    }
+    .consultorioText {
+      width: 100%;
+      padding-top: 20px;
+      flex-direction: column;
+    }
+    .consultorioText .detalles {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .consultorioText .detalles .especialidad {
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    .consultorioText .detalles h3 {
+      width: 100%;
+    }
+    .detalles .detallesText {
+      width: 100%;
+      font-size: 0.8rem;
+      flex-direction: column;
+    }
+    .linkConsultorio {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .linkConsultorio a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

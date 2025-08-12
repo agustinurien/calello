@@ -1,0 +1,493 @@
+---
+import calello from "../assets/images/calello2.png";
+import logo from "../assets/images/logo.png";
+---
+
+<main>
+  <section class="hero">
+    <div class="franja">
+  
+    </div>
+    <div class="heroContainer">
+      <div class="heroImage">
+        <div class="titleContainer2">
+          <h1 class="heroTitle">
+            La atención <br />
+            personalizada <br />
+            que tu hijo <br />
+            necesita
+          </h1>
+          <a href="https://wa.me/5491130145034" target="_blank">CONTACTAR</a>
+        </div>
+        <img src={calello.src} alt="" />
+      </div>
+    </div>
+
+    <aside class="doctor">
+      <div class="presentacion">
+        <div class="dr">
+          <h2>
+            Dr. <br />
+            Santiago <br />
+            Calello
+          </h2>
+          <div class="logoContainer">
+            <img src={logo.src} alt="Logo" class="logo" />
+          </div>
+        </div>
+        <p>
+          El cuidado de tus hijos es el eje de todo lo <br />
+          que hago, tanto en consultorio como en <br />
+          quirófano. Acompañar a cada familia con <br />
+          compromiso, empatía y cercanía es esencial <br />
+          en mi manera de ejercer la medicina. <br />
+          Atiendo en Capital y Gran Buenos Aires. <br />
+          Ante cualquier inquietud, no dudes en <br />
+          escribirme.
+        </p>
+      </div>
+
+      <div class="turnos">
+        <p>
+          Coordiná tu consulta de <br />
+          forma rápida y simple.<br />
+          Atiendo en CABA y Gran<br />
+          Buenos Aires.<br />
+          Hacé clic y reservá tu<br />
+          turno.
+        </p>
+
+        <a href="/consultorios">TURNOS</a>
+      </div>
+
+      <div class="sobreMi">
+        <h3>Acerca de mi</h3>
+        <p>
+          Soy el Dr. Santiago Calello, Cirujano <br /> Pediátrico con formación en
+          gastroenterología <br /> y cirugía mínimamente invasiva. <br />
+          Desde chico supe que quería cuidar a<br />
+          quienes más lo necesitan, y encontré<br />
+          en la infancia mi propósito. Trabajo<br />
+          priorizando el cuidado integral del niño<br />
+          y la contención familiar, combinando<br />
+          excelencia técnica con compromiso<br />
+          humano. Atiendo en Capital y Gran<br />
+          Buenos Aires junto a equipos que <br /> comparten esta misma visión.
+        </p>
+        <a href="/quienSoy">LEER MÁS</a>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<style>
+  main {
+    padding-top: 90px;
+    
+  }
+  .franja{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background-color: #fff1d063;
+    z-index: -1;
+
+  }
+  .hero {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 85px;
+  }
+  .heroContainer {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    
+  }
+  .doctor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: fit-content;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    
+  }
+  .doctor .presentacion {
+    padding-left: 40px;
+    background-color: #fef5e4;
+  }
+  .doctor .presentacion h2 {
+    margin: 0px;
+    margin-top: 85px;
+    font-size: 4.3rem;
+    line-height: 0.9;
+    color: #1f3147;
+    font-family: "Recia-Variable", sans-serif;
+  }
+  .doctor .presentacion .logoContainer {
+    display: flex;
+    align-items: center;
+    padding: 25px 0px;
+
+    width: 180px;
+  }
+  .doctor .presentacion .logoContainer .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .doctor .presentacion p {
+    margin: 0px;
+    color: #1f3147;
+    padding-bottom: 16px;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .doctor .turnos {
+    background-color: #fccfa8;
+    padding: 35px 40px;
+    border-bottom-left-radius: 25px;
+  }
+  .doctor .turnos p {
+    margin: 0px;
+    padding-bottom: 20px;
+
+    color: #1f3147;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .doctor .turnos a {
+    background-color: #1f3147;
+    color: white;
+    padding: 7px 14px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+  .doctor .sobreMi {
+    padding: 0px 40px;
+    background-color: #1f3147;
+  }
+  .doctor .sobreMi h3 {
+    padding: 25px 0px;
+    margin: 0px;
+    font-size: 1.7rem;
+    color: white;
+    font-family: "Supreme-Variable", sans-serif;
+  }
+  .doctor .sobreMi p {
+    margin: 0px;
+    padding-bottom: 35px;
+    font-size: 1.1rem;
+    color: #fef5e4;
+    font-family: "Supreme-Variable", sans-serif;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+  .doctor .sobreMi a {
+    background-color: #fccfa8;
+    color: #1f3147;
+    padding: 7px 14px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+
+  .titleContainer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20%;
+    z-index: 3;
+  }
+  .heroTitle {
+    font-size: 3rem;
+    color: #1f3147;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+  .titleContainer2 a {
+    background-color: #fccfa8;
+    color: #1f3147;
+    padding: 7px 14px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+  .heroImage {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 550px;
+    width: 67%;
+    z-index: 1;
+    
+    
+  }
+  .heroImage img {
+    transform: scale(1.3);
+    height: 100%;
+    width: 80%;
+    object-fit: contain;
+    
+  }
+  @media (max-width: 1400px) {
+    .titleContainer2 {
+      padding-left: 7%;
+    }
+  }
+  @media (max-width: 1150px) {
+    .hero {
+      padding-top: 30px;
+    }
+    .heroContainer {
+      width: 75%;
+      
+    }
+    .heroImage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 550px;
+    width: 85%;
+    
+    
+    overflow: hidden;
+  }
+  .heroImage img {
+    width: 63%;
+    height: auto;
+    
+  }
+    .titleContainer2 {
+      padding-left: 30px;
+    }
+
+    .doctor {
+      width: 37%;
+    }
+    .doctor .presentacion h2 {
+      font-size: 3rem;
+      margin-top: 30px;
+    }
+    .doctor .presentacion {
+      padding-bottom: 40px;
+      padding-left: 33px;
+    }
+    .doctor .presentacion p {
+      font-size: 0.7rem;
+    }
+    .doctor .presentacion .logoContainer {
+      padding: 20px 0px;
+    }
+    .doctor .turnos {
+      padding: 33px 30px;
+    }
+    .doctor .turnos p {
+      font-size: 0.7rem;
+    }
+    .doctor .sobreMi {
+      padding: 0px 33px;
+      padding-right: 20px;
+    }
+    .doctor .sobreMi p {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .titleContainer2 {
+      padding-left: 40px;
+      padding-top: 40px;
+      
+    }
+    .heroTitle {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0px;
+    }
+    .heroContainer {
+      width: 100%;
+      display: flex;
+      justify-content:flex-end;
+      align-items: center;
+      padding-top: 0px;
+    }
+    .heroImage {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      
+    }
+    
+    .heroImage img{
+      width: 80%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .doctor {
+      position: relative;
+      width: 100%;
+      height: fit-content;
+      border-bottom-left-radius: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .doctor .presentacion {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      padding: 0px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      
+  }
+  .dr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 80%;
+
+  }
+    .doctor .presentacion h2 {
+      
+      font-size: 2rem;
+      margin-top: 0px;
+    }
+    .doctor .presentacion h2 br{
+      display: none;
+    }
+    .doctor .presentacion .logoContainer {
+    display: flex;
+    
+    align-items: center;
+    padding: 0px 0px;
+    width: 150px;
+    
+    
+  }
+  .doctor .presentacion .logoContainer .logo {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+  }
+    .doctor .presentacion p{
+      font-size: 0.8rem;
+      padding-bottom: 0px;
+      width: 80%;
+      
+  }
+    .doctor .presentacion p br{
+      display: none;
+      
+  }
+  .doctor .turnos{
+    padding: 20px 0px;
+    padding-left: 0px;
+    border-radius: 0px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around;
+  }
+  .doctor .turnos p{
+    
+    width: 50%;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+  }
+  .doctor .turnos br{
+    display: none;
+  }
+  .doctor .sobreMi{
+    padding: 30px 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .doctor .sobreMi h3 {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 2.5rem;
+  }
+  .doctor .sobreMi P{
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .doctor .sobreMi P br{
+    display: none;
+  }
+  }
+  @media (max-width: 650px) {
+    .heroImage{
+      align-items: flex-end;
+      justify-content: flex-end;
+      
+    }
+    .heroImage img {
+      width: 78%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .titleContainer2{
+      padding-left: 30px;
+      padding-top: 30px;
+
+    }
+    
+  }
+  @media (max-width: 500px) {
+    .heroImage{
+      align-items: flex-end;
+      justify-content: flex-end;
+      
+    }
+    .heroImage img {
+      width: 90%;
+      height: 70%;
+      object-fit: contain;
+    }
+    .titleContainer2{
+      padding-left: 30px;
+      padding-top: 10px;
+
+    }
+
+    
+  }
+</style>

@@ -1,0 +1,100 @@
+---
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+---
+
+<section>
+  <div class="linksContainer">
+    <ul>
+      <li>
+        <a href="/">Inicio</a>
+      </li>
+      <li>
+        <a href="/quienSoy">Quien soy</a>
+      </li>
+      <li>
+        <a href="/consultorios">Consultorios</a>
+      </li>
+      <li>
+        <a href="/quirurgico">Pre Quirurgico</a>
+      </li>
+      <li>
+        <a href="/patologias">Patologias Ambulatorias</a>
+      </li>
+    </ul>
+  </div>
+  <div class="derechos">
+    <div class="socialLinks">
+      <a href="https://www.instagram.com/docsanticalello/" target="_blank"><FaInstagram /></a>
+      <a href="https://www.linkedin.com/in/santiago-e-m-calello-55008418/" target="_blank"><FaLinkedinIn /></a>
+      <a href="https://wa.me/5491130145034" target="_blank"><FaWhatsapp /></a>
+    </div>
+    <div>Todos los derechos reservados.</div>
+    <div>Desarrollado por TAPE Producciones</div>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: black;
+    height: fit-content;
+    padding: 0px 5%;
+  }
+  .linksContainer {
+    padding-top: 50px;
+  }
+  .linksContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+  }
+  .linksContainer ul li {
+  }
+  .linksContainer ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    font-family: "Supreme-Variable", sans-serif;
+  }
+  .derechos {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0px;
+    color: white;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 0.9rem;
+  }
+  .derechos .socialLinks {
+    display: flex;
+    gap: 4px;
+  }
+  .derechos .socialLinks a {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .derechos {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+  }
+</style>

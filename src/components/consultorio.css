@@ -1,0 +1,151 @@
+
+.consultorioContainerSinImage {
+    height: fit-content;
+    padding: 100px 0px;
+    border-bottom: 2px solid gray;
+  }
+.consultorioText {
+    height: fit-content;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .consultorioText .detalles {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 85%;
+  }
+  .consultorioText .detalles .especialidad {
+    width: 20%;
+    height: 100%;
+    font-family: "Supreme-Variable", sans-serif;
+  }
+  .especialidad h3 {
+    margin: 0px;
+  }
+  .detalles .detallesText {
+    display: flex;
+    flex-direction: flex-start;
+    gap: 15px;
+    height: 100%;
+    width: 70%;
+    font-family: "Supreme-Variable", sans-serif;
+    font-size: 0.8rem;
+  }
+  .detalles .detallesText p {
+    margin: 0px;
+    width: 100%;
+  }
+  .linkConsultorio {
+    width: 10%;
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+  }
+  .linkConsultorio a {
+    padding: 7px 20px;
+    background-color: #000000;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: white;
+    text-decoration: none;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+  .contactoConsultorio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .contactoConsultorio a {
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 1050px) {
+    .disclaimer {
+      padding: 20px 5%;
+      height: fit-content;
+    }
+    .disclaimer p br {
+      display: none;
+    }
+    .disclaimer p {
+      font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .titulo .iconContainer {
+      display: none;
+    }
+    section {
+      padding: 0px 5%;
+    }
+    .disclaimer {
+      padding: 20px 5%;
+      height: fit-content;
+    }
+    .disclaimer p br {
+      display: none;
+    }
+    .disclaimer p {
+      font-size: 1rem;
+    }
+    .consultorioContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .consultorioContainer .consultorioImage {
+      width: 100%;
+      height: 200px;
+    }
+    .consultorioContainer .logoContainer {
+      width: 100%;
+      height: 100%;
+    }
+    .consultorioContainer .logoConsultorio {
+      width: 100%;
+      height: 100%;
+    }
+    .consultorioText {
+      width: 100%;
+      padding-top: 20px;
+      flex-direction: column;
+    }
+    .consultorioText .detalles {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .consultorioText .detalles .especialidad {
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    .consultorioText .detalles h3 {
+      width: 100%;
+    }
+    .detalles .detallesText {
+      width: 100%;
+      font-size: 0.8rem;
+      flex-direction: column;
+    }
+    .linkConsultorio {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .linkConsultorio a {
+      width: 100%;
+      text-align: center;
+    }
+  }

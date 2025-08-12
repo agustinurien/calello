@@ -1,0 +1,284 @@
+---
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+
+import logo1 from "../assets/images/logo1.png";
+---
+
+<nav>
+  <a href="/" class="left">
+    <div class="contenedorLogo">
+      <img src={logo1.src} alt="logo" class="logo1" />
+    </div>
+    <h2>Dr. Santiago Calello</h2>
+  </a>
+  <button class="open">☰</button>
+  <div class="right">
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/quienSoy">Quien soy</a></li>
+      <li><a href="/consultorios">Consultorios</a></li>
+      <li><a href="/quirurgico">Pre Quirurgico</a></li>
+      <li><a href="/patologias">Patologias Ambulatorias</a></li>
+    </ul>
+    <div class="socialContainer">
+      <div class="social">
+        <a href="https://www.instagram.com/docsanticalello/" target="_blank"><FaInstagram /></a>
+
+        <a href="https://www.linkedin.com/in/santiago-e-m-calello-55008418/" target="_blank"><FaLinkedinIn /></a>
+      </div>
+      <div class="wpp">
+        <a href="https://wa.me/5491130145034" target="_blank" class="wppIcon"><FaWhatsapp /></a>
+        <a href="https://wa.me/5491130145034" target="_blank" class="contactar">CONTACTAR</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const openButton = document.querySelector(".open");
+  const right = document.querySelector(".right");
+
+  openButton.addEventListener("click", () => {
+    right.classList.toggle("active");
+    openButton.classList.toggle("active");
+
+    // Cambiar el contenido del botón
+    if (openButton.classList.contains("active")) {
+      openButton.textContent = "x"; // o "X"
+    } else {
+      openButton.textContent = "☰"; // hamburguesa
+    }
+  });
+
+  // Cerrar el menú al hacer clic fuera
+  document.addEventListener("click", (event) => {
+    if (!right.contains(event.target) && !openButton.contains(event.target)) {
+      right.classList.remove("active");
+      openButton.classList.remove("active");
+      openButton.textContent = "☰"; // volver al ícono hamburguesa
+    }
+  });
+</script>
+
+<style>
+  .open {
+    display: none;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    background-color: #1f3147;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.455);
+  }
+  .left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+
+    width: 26%;
+  }
+  .left .contenedorLogo {
+    height: 70px;
+    width: 70px;
+  }
+  .left .contenedorLogo .logo1 {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .left h2 {
+    margin: 0px;
+    color: white;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+  .right {
+    display: flex;
+    gap: 20px;
+    padding-right: 8%;
+  }
+  .right ul {
+    display: flex;
+    gap: 15px;
+    margin: 0px;
+  }
+  .right ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .right ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+  .socialContainer {
+    display: flex;
+    gap: 20px;
+  }
+  .socialContainer .social {
+    display: flex;
+    gap: 5px;
+  }
+  .socialContainer .social a {
+    background-color: rgb(255, 255, 255);
+    color: #1f3147;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  .wpp {
+    display: flex;
+    align-items: center;
+    height: 30px;
+  }
+  .wpp .contactar {
+    background-color: #ffdb80;
+    color: #1f3147;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 0px 10px;
+    height: 100%;
+    text-decoration: none;
+    font-family: "Supreme-Variable", sans-serif;
+    font-weight: 700;
+  }
+  .wpp .wppIcon {
+    background-color: #ffdb80;
+    color: #1f3147;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 1300px) {
+    .left {
+      padding-left: 20px;
+      justify-content: flex-start;
+    }
+    .left h2 {
+      font-size: 1rem;
+    }
+    .right {
+      padding-right: 20px;
+      gap: 15px;
+    }
+    .right ul {
+      padding-left: 10px;
+    }
+    .right ul li a {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .wpp .contactar {
+      display: none;
+    }
+    .socialContainer {
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    .socialContainer .social a {
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
+    }
+    .wpp .wppIcon {
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
+    }
+    @media screen and (max-width: 768px) {
+      .open {
+        display: flex;
+        position: relative;
+        z-index: 1001;
+        color: white;
+        background-color: transparent;
+        border: none;
+        padding-right: 20px;
+        font-size: 2rem;
+      }
+
+      nav {
+      }
+
+      .socialContainer {
+        justify-content: flex-start;
+      }
+      .right {
+        display: none;
+        width: 200px;
+        height: 100vh;
+        justify-content: flex-start;
+
+        background-color: #1f3147;
+        padding: 40px 20px;
+      }
+      .right.active {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 40px;
+        width: 200px;
+        height: 100vh;
+        justify-content: flex-start;
+
+        background-color: #1f3147;
+        padding: 40px 20px;
+      }
+      .right ul {
+        flex-direction: column;
+        padding: 0px;
+      }
+      .right ul li {
+        justify-content: flex-start;
+      }
+
+      .left {
+        box-sizing: border-box;
+        width: 100%;
+        gap: 10px;
+        padding-right: 20px;
+        height: 40px;
+      }
+      .left h2 {
+        font-size: 1.3rem;
+      }
+      .left ul {
+        padding: 0px;
+      }
+    }
+  }
+</style>

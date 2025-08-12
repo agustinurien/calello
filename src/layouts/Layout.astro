@@ -1,0 +1,58 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @font-face {
+    font-family: "Recia-Variable";
+    src: url("/fonts/Recia-Variable.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Recia-VariableItalic";
+    src: url("../../public/fonts/Recia-VariableItalic.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Supreme-Variable";
+    src: url("../../public/fonts/Supreme-Variable.ttf") format("truetype");
+    font-weight: [300 700 800];
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Supreme-VariableItalic";
+    src: url("../../public/fonts/Supreme-VariableItalic.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+</style>
