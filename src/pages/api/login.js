@@ -1,7 +1,7 @@
 export const prerender = false;
 
 async function validarContraseña(password) {
-    const contraseñaValida = import.meta.env.SECRET_PASS;
+    const contraseñaValida = process.env.SECRET_PASS;
     console.log("Password recibido:", password, "Contraseña válida:", contraseñaValida);
 
     if (!password) {
