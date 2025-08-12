@@ -1,7 +1,11 @@
 export const prerender = false;
 
 async function validarContraseña(password) {
-    const contraseñaValida = process.env.SECRET_PASS;
+    const contraseñaValida = import.meta.env.SECRET_PASS;
+    if (!contraseñaValida) {
+        console.error("SECRET_PASS no está definida en las variables de entorno.");
+        return false;
+    }
     console.log("Password recibido:", password, "Contraseña válida:", contraseñaValida);
 
     if (!password) {
