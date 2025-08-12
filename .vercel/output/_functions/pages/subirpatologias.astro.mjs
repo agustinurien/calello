@@ -4,7 +4,7 @@ import { $ as $$Layout } from '../chunks/Layout_SJkqxJU_.mjs';
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState, useEffect } from 'react';
 /* empty css                                           */
-import { d as deletePatologiaPost, a as deleteConsultorioPost, f as fetchPatologiasPosts, b as fetchConsultoriosPosts, u as uploadPatologiaPost, c as uploadConsultorioPost } from '../chunks/funciones_B1k4gLSQ.mjs';
+import { d as deletePatologiaPost, a as deleteConsultorioPost, f as fetchPatologiasPosts, b as fetchConsultoriosPosts, u as uploadPatologiaPost, c as uploadConsultorioPost } from '../chunks/funciones_DGBo1bqK.mjs';
 export { renderers } from '../renderers.mjs';
 
 const SubirPatologia = () => {

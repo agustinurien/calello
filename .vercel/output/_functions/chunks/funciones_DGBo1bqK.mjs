@@ -18,10 +18,11 @@ getStorage(app);
 async function fetchPatologiasPosts() {
   const documentRef = collection(db, "patologias");
   const snapshot = await getDocs(documentRef);
-  const postsData = snapshot.docs.map((doc2) => ({ id: doc2.id, ...doc2.data() }));
+  const postsData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
   postsData.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
   return postsData;
 }
+
 async function uploadPatologiaPost({ nombre, resumen, explicacion }) {
   console.log("Uploading patologia post:", { nombre, explicacion });
   if (!nombre || !explicacion) {
@@ -32,13 +33,14 @@ async function uploadPatologiaPost({ nombre, resumen, explicacion }) {
     const docRef = await addDoc(collection(db, "patologias"), {
       nombre,
       resumen,
-      explicacion
+      explicacion,
     });
     console.log("Patologia post created with ID:", docRef.id);
   } catch (e) {
     console.error("Error uploading patologia post:", e);
   }
 }
+
 async function deletePatologiaPost(id) {
   console.log("Deleting patologia post with ID:", id);
   try {
@@ -50,13 +52,15 @@ async function deletePatologiaPost(id) {
     console.error("Error deleting patologia post:", e);
   }
 }
+
 async function fetchConsultoriosPosts() {
   const documentRef = collection(db, "consultorios");
   const snapshot = await getDocs(documentRef);
-  const postsData = snapshot.docs.map((doc2) => ({ id: doc2.id, ...doc2.data() }));
+  const postsData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
   postsData.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
   return postsData;
 }
+
 async function deleteConsultorioPost(id) {
   console.log("Deleting consultorio post with ID:", id);
   try {
@@ -68,6 +72,7 @@ async function deleteConsultorioPost(id) {
     console.error("Error deleting consultorio post:", e);
   }
 }
+
 async function uploadConsultorioPost({ nombre, direccionModalidad, masInformacion, adicional, linkConsultorio }) {
   console.log("Uploading consultorio post:", { nombre, direccionModalidad });
   if (!nombre || !direccionModalidad) {
@@ -80,7 +85,7 @@ async function uploadConsultorioPost({ nombre, direccionModalidad, masInformacio
       direccionModalidad,
       masInformacion,
       adicional,
-      linkConsultorio
+      linkConsultorio,
     });
     console.log("Consultorio post created with ID:", docRef.id);
   } catch (e) {

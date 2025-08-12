@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 import { jsx, Fragment, jsxs } from 'react/jsx-runtime';
 import { useState, useEffect } from 'react';
-import { b as fetchConsultoriosPosts } from '../chunks/funciones_B1k4gLSQ.mjs';
+import { b as fetchConsultoriosPosts } from '../chunks/funciones_DGBo1bqK.mjs';
 /* empty css                                        */
 export { renderers } from '../renderers.mjs';
 

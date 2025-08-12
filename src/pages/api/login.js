@@ -1,4 +1,3 @@
-export const prerender = false;
 
 async function validarContraseña(password) {
     const contraseñaValida = import.meta.env.SECRET_PASS;

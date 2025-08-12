@@ -5,7 +5,7 @@ import { jsx, Fragment, jsxs } from 'react/jsx-runtime';
 import { useState, useEffect } from 'react';
 /* empty css                                      */
 import { IoIosArrowDropupCircle, IoIosArrowDropdownCircle } from 'react-icons/io';
-import { f as fetchPatologiasPosts } from '../chunks/funciones_B1k4gLSQ.mjs';
+import { f as fetchPatologiasPosts } from '../chunks/funciones_DGBo1bqK.mjs';
 export { renderers } from '../renderers.mjs';
 
 const icon3 = new Proxy({"src":"/_astro/icon3.Bk9T1DWt.png","width":1432,"height":1446,"format":"png"}, {
