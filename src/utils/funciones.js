@@ -85,28 +85,6 @@ async function uploadConsultorioPost({ nombre, direccionModalidad, masInformacio
   }
 }
 
-async function contraseña(password) {
-  const contraseñaValida = import.meta.env.SECRET_PASS;
-  console.log("Password recibido en función:", password, "Contraseña válida:", contraseñaValida);
-
-  if (!password) {
-    console.error("Contraseña faltante.");
-    return false;
-  }
-  try {
-    if (contraseñaValida === password) {
-      console.log("Contraseña correcta.");
-      return true;
-    } else {
-      console.error("Contraseña incorrecta.");
-      return false;
-    }
-  } catch (e) {
-    console.error("Error", e);
-    return false;
-  }
-}
-
 
 
 export {
@@ -116,5 +94,4 @@ export {
   uploadConsultorioPost,
   fetchConsultoriosPosts,
   deleteConsultorioPost,
-  contraseña
 };

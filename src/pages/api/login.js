@@ -1,12 +1,27 @@
-// src/pages/api/login.js what
 export const prerender = false;
 
+async function validarContraseña(password) {
+    const contraseñaValida = import.meta.env.SECRET_PASS;
+    console.log("Password recibido:", password, "Contraseña válida:", contraseñaValida);
+
+    if (!password) {
+        console.error("Contraseña faltante.");
+        return false;
+    }
+    try {
+        return contraseñaValida === password;
+    } catch (e) {
+        console.error("Error validando contraseña", e);
+        return false;
+    }
+}
 
 export async function POST({ request }) {
     try {
         const formData = await request.formData();
         const password = formData.get("password");
-        const autorizado = password === "12345678"; // Cambia "1234" por tu lógica real
+
+        const autorizado = await validarContraseña(password);
 
         return new Response(
             JSON.stringify({ autorizado }),
@@ -16,6 +31,7 @@ export async function POST({ request }) {
             }
         );
     } catch (error) {
+        console.error("Error en POST /api/login:", error);
         return new Response(
             JSON.stringify({ error: error.message }),
             {
