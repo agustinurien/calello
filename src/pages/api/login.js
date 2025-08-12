@@ -6,7 +6,7 @@ export async function POST({ request }) {
     try {
         const formData = await request.formData();
         const password = formData.get("password");
-        const autorizado = password === "1234"; // Cambia "1234" por tu lógica real
+        const autorizado = password === "12345678"; // Cambia "1234" por tu lógica real
 
         return new Response(
             JSON.stringify({ autorizado }),
