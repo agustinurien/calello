@@ -1,3 +1,4 @@
+export const prerender = false;
 
 export async function ALL({ request }) {
     return new Response(
