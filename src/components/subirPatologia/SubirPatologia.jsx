@@ -114,6 +114,7 @@ const SubirPatologia = () => {
     <div className="uploadFirebase">
 
       <section className="subirPatologia">
+        <h1>Patología</h1>
         <form onSubmit={handleSubmit} className="formContainer">
           <input
             type="text"
@@ -157,6 +158,7 @@ const SubirPatologia = () => {
       </section>
 
       <section className="subirConsultorio">
+        <h1>Consultorio</h1>
         <form onSubmit={handleSubmit2} className="formContainer">
           <input
             type="text"

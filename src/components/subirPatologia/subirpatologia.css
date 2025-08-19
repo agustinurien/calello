@@ -10,6 +10,28 @@
   align-items: center;
   justify-content: center;
 }
+.subirPatologia h1 {
+  font-family: "Supreme-Variable", sans-serif;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.756);
+  margin: 0px;
+  padding: 10px 0px;
+  width: 90%;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.subirConsultorio h1 {
+  font-family: "Supreme-Variable", sans-serif;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.756);
+  margin: 0px;
+  padding: 10px 0px;
+  width: 90%;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .subirConsultorio{
   width: 50%;
   display: flex;
