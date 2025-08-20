@@ -11,19 +11,19 @@ const Cirugias = () => {
       id: 1,
       title: "Cirugía Programada",
       texto:
-        "En caso de programar una cirugía siempre es preferible hacerlo con tiempo.\n Esto disminuye las posibilidades de errores involuntarios. Siempre se solicitara un Electrocardiograma evaluación de un cardiólogo y un Laboratorio completo, con Hemograma completo con coagulo-grama, junto con la evaluación por un Pediatra (preferentemente el de cabecera) ya que ellos son parte esencial de la curación del paciente. De esta es la forma descartamos patologías previamente no advertidas y disminuir los riesgos de las cirugías.\n Otros estudios se podrían pedir si la patología lo amerita, ej: ecografía, tomografía, resonancia, laboratorios de mayor complejidad, etc.",
+        "En caso de programar una cirugía siempre es preferible hacerlo con tiempo. Esto disminuye las posibilidades de errores involuntarios.\nSe solicitará un Electrocardiograma, evaluación de un cardiólogo y un Laboratorio completo (con Hemograma completo con coagulograma) Asimismo, es importante la evaluación de un Pediatra (preferentemente de cabecera) ya que ellos son parte esencial de la curación del paciente. De esta es la forma descartamos patologías previamente no advertidas y disminuimos los riesgos de las cirugías \n Si la patología amerita otros estudios se podrán pedir, ejemplo: ecografía, tomografía, resonancia, laboratorios de mayor complejidad, etc."
     },
     {
       id: 2,
       title: "Semana Previa",
       texto:
-        "Es importante que el paciente entienda que se va a operar, el ocultar información no funciona bien. Siempre lo mejor es explicar el porque de la intervención sin importar la edad, y por sobre todas las cosas remarcar que esto lo hacemos para que el/ella se sienta mejor. De ser necesario se puede realizar consultas de psicoprofilaxis prequirurgica.\n Dos días antes de la intervención lo mejor es bañar al paciente con JABÓN DE PERVINOX O ANTISÉPTICO, esto disminuye la carga de gérmenes en piel y el riesgo de infecciones post-operatorias.",
+        "Es importante que el paciente entienda que se va a operar, el ocultar información no funciona bien. Lo mejor es explicar el por qué de la intervención, sin importar la edad, y por sobre todas las cosas remarcar que esto lo hacemos para que el/ella se sienta mejor. De ser necesario se puede realizar consultas de psicoprofilaxis prequirúrgica. \n Dos días antes de la intervención lo mejor es bañar al paciente con JABÓN DE PERVINOX O ANTISÉPTICO, para disminuir la carga de gérmenes en piel y el riesgo de infecciones post-operatorias."
     },
     {
       id: 3,
       title: "Ayuno",
       texto:
-        "Es importante mantener los ayunos requeridos para las cirugías, esto evita accidentes durante la anestesia:\n Hasta 6 horas antes, el paciente puede consumir alimentos LIVIANOS. Luego de este tiempo no deberá ingerir ningún tipo de alimento SOLI Hasta 5 horas antes el paciente podra consumir LECHE DE FORMULA. Luego de esto no deberá ingerir LECHE DE FORMU Hasta 3 horas antes el paciente podra ingerir LECHE MATERNA (pecho). Luego de este tiempo el paciente no deberá ingerir LECHE MATER Hasta 1 hora antes el paciente puede ingerir AGUA, TE O BEBIDAS DEPORTIVAS. Luego de este tiempo no deberá ingerir LíQUIDOS CLAROS.\n  Estos cálculos están realizados en base al tiempo que tarda el estomago en evacuar cada uno de los contenidos.",
+        "Es importante mantener los ayunos requeridos para las cirugías, esto evita accidentes durante la anestesia:\n • Hasta 6 horas antes, el paciente puede consumir alimentos LIVIANOS. Luego de este tiempo no deberá ingerir ningún tipo de alimento SÓLIDO. \n • Hasta 5 horas antes el paciente podrá consumir LECHE DE FÓRMULA. Luego de esto no deberá ingerir LECHE DE FÓRMULA.\n • Hasta 3 horas antes el paciente podrá ingerir LECHE MATERNA (pecho). Luego de este tiempo el paciente no deberá ingerir LECHE MATERNA. \n • Hasta 1 hora antes el paciente puede ingerir AGUA, TÉ O BEBIDAS DEPORTIVAS. Luego de este tiempo no deberá ingerir LÍQUIDOS CLAROS.\n Estos cálculos están realizados en base al tiempo que tarda el estómago en evacuar cada uno de los contenidos.",
     },
     {
       id: 4,
